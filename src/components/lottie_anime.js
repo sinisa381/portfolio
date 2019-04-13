@@ -9,7 +9,6 @@ import rocket from '../lotties/rocket.json'
 // import { mq } from './globals'
 
 const UncontrolledLottie = ({ location, test, zindex }) => {
-	console.log(location.pathname)
 	const Contact = css`
 		width: 6.2rem;
 		height: 6.2rem;
