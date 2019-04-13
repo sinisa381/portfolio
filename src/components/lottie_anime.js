@@ -6,7 +6,7 @@ import { css } from '@emotion/core'
 import weiter from '../lotties/weiter.json'
 import cube from '../lotties/cube.json'
 import rocket from '../lotties/rocket.json'
-import { mq } from './globals'
+// import { mq } from './globals'
 
 const UncontrolledLottie = ({ location, test, zindex }) => {
 	const Contact = css`
@@ -39,30 +39,9 @@ const UncontrolledLottie = ({ location, test, zindex }) => {
 		margin-top: .3rem;
 	`
 	const LottieContainer = styled.div`
-    ${location.pathname === '/portfolio' && Weiter}
-    ${location.pathname === '/services' && Rocket}
-    ${location.pathname === '/about' && About}
-    ${location.pathname === '/contact' && Contact}
-    /* ${location.pathname === '/contact' && Contact} */
-		/* ${mq[1]} {
-			height: ${location.pathname === '/portfolio' ? '11rem' : '6.5rem'};
-			width: ${location.pathname === '/portfolio' ? '11rem' : '6.5rem'};
-		}
-		position: ${location.pathname === '/portfolio' ? 'absolute' : 'relative'};
-		left: ${location.pathname === '/portfolio' ? '-45px' : '0px'};
-		top: ${location.pathname === '/portfolio' ? '5px' : '0px'}; */
-  `
-
-	// function animeDataFunc() {
-	// 	switch (location.pathname) {
-	// 		case '/contact':
-	// 			return userMobile
-	// 		case '/portfolio':
-	// 			return weiter
-	// 		default:
-	// 			return userMobile
-	// 	}
-	// }
+		${location.pathname === '/portfolio' && Weiter} ${location.pathname === '/services' &&
+				Rocket} ${location.pathname === '/about' && About} ${location.pathname === '/contact' && Contact};
+	`
 
 	function animationData() {
 		switch (location.pathname) {
