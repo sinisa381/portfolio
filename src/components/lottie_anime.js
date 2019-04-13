@@ -6,9 +6,10 @@ import { css } from '@emotion/core'
 import weiter from '../lotties/weiter.json'
 import cube from '../lotties/cube.json'
 import rocket from '../lotties/rocket.json'
-import { mq } from './globals'
+// import { mq } from './globals'
 
 const UncontrolledLottie = ({ location, test, zindex }) => {
+	console.log(location.pathname)
 	const Contact = css`
 		width: 6.2rem;
 		height: 6.2rem;
@@ -46,17 +47,19 @@ const UncontrolledLottie = ({ location, test, zindex }) => {
 	`
 
 	function animationData() {
-		switch (location.pathname) {
-			case '/contact':
-				return userMobile
-			case '/portfolio':
-				return weiter
-			case '/services':
-				return rocket
-			case '/about':
-				return cube
-			default:
-				return userMobile
+		if (location) {
+			switch (location.pathname) {
+				case '/contact':
+					return userMobile
+				case '/portfolio':
+					return weiter
+				case '/services':
+					return rocket
+				case '/about':
+					return cube
+				default:
+					return userMobile
+			}
 		}
 	}
 	const defaultOptions = {
