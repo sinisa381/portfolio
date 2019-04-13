@@ -10,7 +10,6 @@ import { theme } from './globals'
 import Header from './header'
 import Footer from './footer'
 
-window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true
 const Layout = ({ children, data, location }) => {
 	const { site } = useStaticQuery(graphql`
 		query {
