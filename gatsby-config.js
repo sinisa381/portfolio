@@ -3,13 +3,37 @@ require('dotenv').config({
 })
 module.exports = {
 	siteMetadata: {
-		title: `Gatsby Default Starter`,
-		description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-		author: `@gatsbyjs`
+		title: `Platforma`,
+		description: `random dev description in config`,
+		author: `@sinisacolic`,
+		about: `web development`
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
 		'gatsby-plugin-emotion',
+		{
+			resolve: `gatsby-plugin-material-ui`,
+			options: {
+				// Add any options here
+			}
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				path: `${__dirname}/src/markd`,
+				name: 'markdown-pages'
+			}
+		},
+
+		`gatsby-transformer-remark`,
+		// {
+		// 	resolve: `@wapps/gatsby-plugin-fonts`,
+		// 	options: {
+		// 		googleFonts: {
+		// 			families: [ 'Montserrat:300,300i,400', 'Roboto:400,500,500i', 'Open Sans' ]
+		// 		}
+		// 	}
+		// },
 		{
 			resolve: `gatsby-source-contentful`,
 			options: {
@@ -31,6 +55,13 @@ module.exports = {
 			options: {
 				name: `images`,
 				path: `${__dirname}/src/images`
+			}
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `logo`,
+				path: `${__dirname}/src/logo`
 			}
 		},
 		`gatsby-transformer-sharp`,
