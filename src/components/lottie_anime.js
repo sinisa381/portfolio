@@ -39,10 +39,10 @@ const UncontrolledLottie = ({ location, test, zindex }) => {
 		margin-top: .3rem;
 	`
 	const LottieContainer = styled.div`
-		${location.pathname === '/portfolio' && Weiter};
-		${location.pathname === '/services' && Rocket};
-		${location.pathname === '/about' && About};
-		${location.pathname === '/contact' && Contact};
+		${location && location.pathname === '/portfolio' && Weiter};
+		${location && location.pathname === '/services' && Rocket};
+		${location && location.pathname === '/about' && About};
+		${location && location.pathname === '/contact' && Contact};
 	`
 
 	function animationData() {
