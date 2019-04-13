@@ -6,7 +6,7 @@ import { css } from '@emotion/core'
 import weiter from '../lotties/weiter.json'
 import cube from '../lotties/cube.json'
 import rocket from '../lotties/rocket.json'
-// import { mq } from './globals'
+import { mq } from './globals'
 
 const UncontrolledLottie = ({ location, test, zindex }) => {
 	const Contact = css`
@@ -39,8 +39,10 @@ const UncontrolledLottie = ({ location, test, zindex }) => {
 		margin-top: .3rem;
 	`
 	const LottieContainer = styled.div`
-		${location.pathname === '/portfolio' && Weiter} ${location.pathname === '/services' &&
-				Rocket} ${location.pathname === '/about' && About} ${location.pathname === '/contact' && Contact};
+		${location.pathname === '/portfolio' && Weiter};
+		${location.pathname === '/services' && Rocket};
+		${location.pathname === '/about' && About};
+		${location.pathname === '/contact' && Contact};
 	`
 
 	function animationData() {
