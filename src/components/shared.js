@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
-import { mq } from './globals'
+import { mq, theme } from './globals'
 
 export const FlexBox = styled.div`
 	display: flex;
@@ -10,33 +10,24 @@ export const FlexBox = styled.div`
 	/* width: ${props => props.width && props.width}; */
 `
 export const NavItem = styled(Link)`
+cursor:pointer;
 display:${props => (props.nav ? 'block' : 'none')};
 ${mq[2]}{
-  display:block;
+  display:block; 
 }
 padding:4px 0;
-font-family:Lato, sans-serif;
+font-family:${theme.font.heading};
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Lato', sans-serif;
+/* font-family: 'Montserrat', sans-serif; */
 text-decoration:none;
 font-size: ${props => (props.nav ? '.6rem' : '1rem')};
 margin-left: 1.4rem;
 margin-top:${props => props.nav && '.5rem'};
 color: ${props => (props.nav ? '#ffffff' : 'rgba(0,0,0,.5)')};
-position:relative;
-	transition: text-shadow .3s;
-  letter-spacing:2px;
-  &:hover{
-	text-shadow: 0 0 .65px #333, 0 0 .65px #333;
-  }
-/* &:after{
-  content:'';
-  position:absolute;
-  width:100%;
-  bottom:0;
-  left:50%;
-  transform:translateX(-50%);
-  height:1px;
-  color:black;
-  background-color:black;
-  transition:all .2s;
-} */
+margin:${props => props.nav && 0};
+padding:${props => props.nav && '8px 20px'};
+font-variant:${props => props.nav && 'small-caps'}
+
+
 `

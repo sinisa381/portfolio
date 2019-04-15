@@ -9,7 +9,7 @@ import rocket from '../lotties/rocket.json'
 import welcome from '../lotties/cool.json'
 // import { mq } from './globals'
 
-const UncontrolledLottie = ({ location, test, zindex }) => {
+const UncontrolledLottie = ({ location }) => {
 	const Contact = css`
 		width: 6.2rem;
 		height: 6.2rem;
@@ -32,25 +32,27 @@ const UncontrolledLottie = ({ location, test, zindex }) => {
 		overflow: hidden;
 		margin-top: .3rem;
 	`
-	const Welcome = css`
+	const About = css`
 		width: 5rem;
 		height: 5rem;
 		overflow: hidden;
 		margin-top: .3rem;
+		margin-left: .4rem;
 	`
-	const About = css`
+	const Home = css`
 		width: 100%;
 		height: 5rem;
 		border-radius: 100%;
 		overflow: hidden;
 		margin-top: .3rem;
+		margin-left: -.5rem;
 	`
 	const LottieContainer = styled.div`
 		${location && location.pathname === '/services' && Weiter};
 		${location && location.pathname === '/portfolio' && Rocket};
 		${location && location.pathname === '/about' && About};
 		${location && location.pathname === '/contact' && Contact};
-		${location && location.pathname === '/home' && Welcome};
+		${location && location.pathname === '/' && Home};
 	`
 
 	function animationData() {
@@ -63,9 +65,9 @@ const UncontrolledLottie = ({ location, test, zindex }) => {
 				case '/services':
 					return weiter
 				case '/':
-					return welcome
-				case '/about':
 					return cube
+				case '/about':
+					return welcome
 				default:
 					return userMobile
 			}

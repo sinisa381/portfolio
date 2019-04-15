@@ -1,7 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
+import svgtest from '../images/undraw/undraw_code_review_l1q9.svg'
+import { Backpack, Browser } from 'react-kawaii'
 import Layout from '../components/layout'
+import { FlexBox } from '../components/shared'
 
 class BlogPostTemplate extends React.Component {
 	render() {
@@ -13,8 +15,21 @@ class BlogPostTemplate extends React.Component {
 		})
 		return (
 			<Layout data={data} location={this.props.location} port={'tralala'}>
-				<p>ovo je template da vidimo kako ovo radi</p>
-				{/* <p>{data}</p> */}
+				<div style={{}}>
+					<FlexBox justify='space-around'>
+						<Browser size={150} mood='lovestruck' color='#61DDBC' />
+						<p>Aaaa kakve su slicice :)</p>
+					</FlexBox>
+					<img
+						src={svgtest}
+						alt='svgtest'
+						style={{
+							width: '20rem',
+							height: '20rem'
+						}}
+					/>
+				</div>
+				<Backpack size={220} mood='excited' color='#FFD882' />
 			</Layout>
 		)
 	}

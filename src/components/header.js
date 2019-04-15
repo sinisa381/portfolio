@@ -35,7 +35,8 @@ const Header = ({ site, location }) => {
 			<NavItem
 				style={{ color }}
 				activeStyle={{
-					textShadow: '0 0 .65px #333, 0 0 .65px #333'
+					color: 'rgba(0,0,0,.7)',
+					borderBottom: '1px solid rgba(0,0,0,.7)'
 				}}
 				to='/'
 			>
@@ -45,11 +46,12 @@ const Header = ({ site, location }) => {
 			{navItems.allMarkdownRemark.edges.map(({ node }) => {
 				const item = node.frontmatter.title
 				const linkTo = node.frontmatter.path
+
 				return (
 					<NavItem
-						style={{ color }}
 						activeStyle={{
-							textShadow: '0 0 .65px #333, 0 0 .65px #333'
+							color: 'rgba(0,0,0,1)',
+							borderBottom: '1px solid rgba(0,0,0,.8)'
 						}}
 						to={linkTo}
 						key={item}
@@ -95,6 +97,7 @@ const Header = ({ site, location }) => {
 						</FlexBox>
 					</FlexBox>
 					<Heading location={location} />
+					<hr style={{ margin: '1.5rem 0' }} />
 					{/* <div
 					css={{
 						margin: `0 auto`,

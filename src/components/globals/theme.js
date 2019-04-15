@@ -21,7 +21,7 @@ const theme = {
 	},
 	font: {
 		heading: 'Montserrat, sans-serif',
-		lead: 'Roboto',
+		lead: 'Roboto, sans-serif',
 		text: 'Open Sans Condensed, sans-serif'
 	},
 	weight: {
