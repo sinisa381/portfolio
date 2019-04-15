@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 import { FaBars } from 'react-icons/fa'
@@ -23,28 +23,43 @@ const Header = ({ site, location }) => {
 					node {
 						frontmatter {
 							title
+							path
 						}
 					}
 				}
 			}
 		}
 	`)
-	const navigationItems = color =>
-		navItems.allMarkdownRemark.edges.map(({ node }) => {
-			const item = node.frontmatter.title
-			return (
-				<NavItem
-					style={{ color }}
-					activeStyle={{
-						textShadow: '0 0 .65px #333, 0 0 .65px #333'
-					}}
-					to={item}
-					key={item}
-				>
-					{item}
-				</NavItem>
-			)
-		})
+	const navigationItems = color => (
+		<React.Fragment>
+			<NavItem
+				style={{ color }}
+				activeStyle={{
+					textShadow: '0 0 .65px #333, 0 0 .65px #333'
+				}}
+				to='/'
+			>
+				home
+			</NavItem>
+
+			{navItems.allMarkdownRemark.edges.map(({ node }) => {
+				const item = node.frontmatter.title
+				const linkTo = node.frontmatter.path
+				return (
+					<NavItem
+						style={{ color }}
+						activeStyle={{
+							textShadow: '0 0 .65px #333, 0 0 .65px #333'
+						}}
+						to={linkTo}
+						key={item}
+					>
+						{item}
+					</NavItem>
+				)
+			})}
+		</React.Fragment>
+	)
 
 	return (
 		<React.Fragment>

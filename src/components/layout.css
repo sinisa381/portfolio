@@ -624,24 +624,3 @@ pre tt:after {
 /* item */
 
 /* image */
-
-/* First demo image */
-
-.flex__item:nth-child(1) .flex__text:nth-child(2),
-.flex__item:nth-child(1) .flex__text:nth-child(3) {
-	width: 240px;
-	padding: 5px 10px;
-	box-sizing: border-box;
-	border: 1px solid #6bbcf2;
-	font-size: 1.3em;
-	opacity: 0.5;
-	transition: all .9s cubic-bezier(.25, .25, .52, 1.30);
-}
-.flex__item:nth-child(1) .flex__text:nth-child(2) {
-	top: 3.9em;
-	left: -100%;
-	padding-bottom: 5px;
-	border-bottom: 0;
-	background: linear-gradient(to top, rgba(3, 3, 3, 0.5), rgba(41, 65, 107, 0.5));
-}
-/* asdadasdad */

@@ -6,7 +6,7 @@ const Heading = ({ location }) => {
 	if (location) {
 		return <div>{location.pathname.replace(/\//g, '')}</div>
 	} else {
-		return 'whatever'
+		return <div>Loading...</div>
 	}
 }
 

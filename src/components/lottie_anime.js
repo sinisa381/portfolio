@@ -6,6 +6,7 @@ import { css } from '@emotion/core'
 import weiter from '../lotties/weiter.json'
 import cube from '../lotties/cube.json'
 import rocket from '../lotties/rocket.json'
+import welcome from '../lotties/cool.json'
 // import { mq } from './globals'
 
 const UncontrolledLottie = ({ location, test, zindex }) => {
@@ -31,18 +32,25 @@ const UncontrolledLottie = ({ location, test, zindex }) => {
 		overflow: hidden;
 		margin-top: .3rem;
 	`
+	const Welcome = css`
+		width: 5rem;
+		height: 5rem;
+		overflow: hidden;
+		margin-top: .3rem;
+	`
 	const About = css`
-		width: 6rem;
-		height: 6rem;
+		width: 100%;
+		height: 5rem;
 		border-radius: 100%;
 		overflow: hidden;
 		margin-top: .3rem;
 	`
 	const LottieContainer = styled.div`
-		${location && location.pathname === '/portfolio' && Weiter};
-		${location && location.pathname === '/services' && Rocket};
+		${location && location.pathname === '/services' && Weiter};
+		${location && location.pathname === '/portfolio' && Rocket};
 		${location && location.pathname === '/about' && About};
 		${location && location.pathname === '/contact' && Contact};
+		${location && location.pathname === '/home' && Welcome};
 	`
 
 	function animationData() {
@@ -51,9 +59,11 @@ const UncontrolledLottie = ({ location, test, zindex }) => {
 				case '/contact':
 					return userMobile
 				case '/portfolio':
-					return weiter
-				case '/services':
 					return rocket
+				case '/services':
+					return weiter
+				case '/':
+					return welcome
 				case '/about':
 					return cube
 				default:
