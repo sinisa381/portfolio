@@ -24,6 +24,13 @@ module.exports = {
 				name: 'markdown-pages'
 			}
 		},
+		{
+			resolve: `gatsby-mdx`,
+			options: {
+				// Apply gatsby-mdx to both .mdx and .md files
+				extensions: [ '.mdx', '.md' ]
+			}
+		},
 
 		`gatsby-transformer-remark`,
 		// {
@@ -34,22 +41,7 @@ module.exports = {
 		// 		}
 		// 	}
 		// },
-		{
-			resolve: `gatsby-source-contentful`,
-			options: {
-				spaceId: `${process.env.SPACE_ID}`,
-				accessToken: `${process.env.TOKEN}`
-			}
-		},
-		{
-			resolve: `gatsby-remark-images-contentful`,
-			options: {
-				// It's important to specify the maxWidth (in pixels) of
-				// the content container as this plugin uses this as the
-				// base for generating different widths of each image.
-				maxWidth: 590
-			}
-		},
+
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {

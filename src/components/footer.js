@@ -1,37 +1,19 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { Text } from '../components/shared'
 
 const Footer = ({ site }) => {
-	const { title } = site
-	const data = useStaticQuery(graphql`
-		{
-			allContentfulVlasnik {
-				edges {
-					node {
-						ime
-						slika {
-							fixed(width: 300) {
-								...GatsbyContentfulFixed_withWebp_noBase64
-							}
-						}
-					}
-				}
-			}
-		}
-	`)
+	const { author } = site
 	return (
 		<footer
 			css={theme => ({
 				background: theme.color.sunny,
 				marginBottom: `0`,
-				fontFamily: theme.font.heading
+				fontFamily: theme.font.heading,
+				marginTop: '.6rem'
 			})}
 		>
-			<div>
-				{title}
-				© {new Date().getFullYear()}, Built with
-				{` `}
-				<a href='https://www.gatsbyjs.org'>Gatsby</a>
+			<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+				<Text color='#eeeee'>© {new Date().getFullYear()} All rights reserved Sinisa Colic</Text>
 			</div>
 		</footer>
 	)

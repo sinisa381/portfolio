@@ -31,3 +31,27 @@ font-variant:${props => props.nav && 'small-caps'}
 
 
 `
+export const Title = styled.h1`
+	font-family: Lato, sans-serif;
+	font-weight: 300;
+	font-size: 1.9rem;
+`
+
+export const Text = styled.p`
+	font-size: .5rem;
+	${mq[1]} {
+		font-size: 1rem;
+	}
+	font-family: 'Hind madurai', sans-serif;
+	font-weight: 300;
+	font-size: 1rem;
+	color: ${props => (props.color ? props.color : 'black')};
+	margin: 0;
+	padding: 0;
+`
+export const HomeSection = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+`

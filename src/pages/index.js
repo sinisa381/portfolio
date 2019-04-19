@@ -1,35 +1,39 @@
 import React from 'react'
+import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
-import svgtest from '../images/undraw/undraw_code_review_l1q9.svg'
-import { Backpack, Browser } from 'react-kawaii'
+import { FlexBox, Title, Text, HomeSection } from '../components/shared'
+import { mq } from '../components/globals'
+import reactUndraw from '../images/undraw/undraw_react_y7wq.svg'
 import Layout from '../components/layout'
-import { FlexBox } from '../components/shared'
+import { MDXProvider } from '@mdx-js/tag'
+import Hello from '../mdx/aloha.mdx'
 
 class BlogPostTemplate extends React.Component {
 	render() {
-		// const post = this.props.data.markdownRemark
-		// const siteTitle = this.props.data.site.siteMetadata.title
-		// let items = []
 		const data = this.props.data.allMarkdownRemark.edges.forEach(({ node }) => {
 			return node.frontmatter.title
 		})
 		return (
 			<Layout data={data} location={this.props.location} port={'tralala'}>
-				<div style={{}}>
-					<FlexBox justify='space-around'>
-						<Browser size={150} mood='lovestruck' color='#61DDBC' />
-						<p>Aaaa kakve su slicice :)</p>
-					</FlexBox>
-					<img
-						src={svgtest}
-						alt='svgtest'
+				<HomeSection style={{}}>
+					<Image
+						src={reactUndraw}
+						alt='react picture'
 						style={{
-							width: '20rem',
-							height: '20rem'
+							width: '18rem',
+							height: '18rem'
 						}}
 					/>
-				</div>
-				<Backpack size={220} mood='excited' color='#FFD882' />
+					<div style={{ width: '50%' }}>
+						<Box>
+							<Title>Fast and reliable</Title>
+							<Text>
+								Hello and <span>welcome</span>. I'm a frontend developer specialized in React and Gatsby
+								combined with Contentful or Wordpress. Happy hunting!
+							</Text>
+						</Box>
+					</div>
+				</HomeSection>
 			</Layout>
 		)
 	}
@@ -47,5 +51,19 @@ export const Query = graphql`
 				}
 			}
 		}
+	}
+`
+
+const Image = styled.img`margin: 0;`
+const Box = styled.div`
+	border: none;
+	margin-left: 1rem;
+	padding: 0rem;
+	padding-left: 0rem;
+	${mq[2]} {
+		margin-left: 2rem;
+		padding: 2rem;
+		padding-left: 2rem;
+		border-left: 1px solid black;
 	}
 `

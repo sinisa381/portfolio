@@ -28,7 +28,7 @@ const Layout = ({ children, data, location }) => {
 		<React.Fragment>
 			<Helmet>
 				<link
-					href='https://fonts.googleapis.com/css?family=Montserrat:200,400|Josefin+Sans:300,400|Josefin+Sans:300,400|Lato:400,700|Mrs+Sheppards'
+					href='https://fonts.googleapis.com/css?family=Montserrat:200,400|Hind+Madurai|Josefin+Sans:300,400|Josefin+Sans:300,400|Lato:400,700|Mrs+Sheppards'
 					rel='stylesheet'
 				/>
 			</Helmet>
@@ -41,7 +41,7 @@ const Layout = ({ children, data, location }) => {
 								margin: `0 auto`,
 								maxWidth: 960,
 								marginTop: '1rem',
-								padding: `0px 1.0875rem 1.45rem`,
+								// padding: `0px 1.0875rem 1.45rem`,
 								paddingTop: 0
 							})}
 						>
@@ -63,6 +63,7 @@ const MasterBackground = styled.div`
 	background-attachment: fixed;
 	background-size: cover;
 	background-color: #ffffff;
+	height: 100vh;
 `
 
 export default Layout
