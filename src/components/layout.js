@@ -60,6 +60,8 @@ const MasterBackground = styled.div`
 	background-attachment: fixed;
 	background-size: cover;
 	background-color: #ffffff;
+	height: 100%;
+	min-height: 100vh;
 `
 
 export default Layout
