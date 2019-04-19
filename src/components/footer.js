@@ -7,9 +7,8 @@ const Footer = ({ site }) => {
 		<footer
 			css={theme => ({
 				background: theme.color.sunny,
-				marginBottom: `0`,
 				fontFamily: theme.font.heading,
-				marginTop: '.6rem'
+				marginTop: '2rem'
 			})}
 		>
 			<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>

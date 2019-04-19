@@ -38,9 +38,6 @@ const Layout = ({ children, data, location }) => {
 					<div>
 						<div
 							css={theme => ({
-								margin: `0 auto`,
-								maxWidth: 960,
-								marginTop: '1rem',
 								// padding: `0px 1.0875rem 1.45rem`,
 								paddingTop: 0
 							})}
@@ -63,7 +60,6 @@ const MasterBackground = styled.div`
 	background-attachment: fixed;
 	background-size: cover;
 	background-color: #ffffff;
-	height: 100vh;
 `
 
 export default Layout

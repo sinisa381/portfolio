@@ -15,7 +15,7 @@ class BlogPostTemplate extends React.Component {
 		})
 		return (
 			<Layout data={data} location={this.props.location} port={'tralala'}>
-				<HomeSection style={{}}>
+				<HomeSection>
 					<Image
 						src={reactUndraw}
 						alt='react picture'
