@@ -28,9 +28,8 @@ color: ${props => (props.nav ? '#ffffff' : 'rgba(0,0,0,.5)')};
 margin:${props => props.nav && 0};
 padding:${props => props.nav && '8px 20px'};
 font-variant:${props => props.nav && 'small-caps'}
-
-
 `
+
 export const Title = styled.h1`
 	font-family: Lato, sans-serif;
 	font-weight: 300;
@@ -38,13 +37,12 @@ export const Title = styled.h1`
 `
 
 export const Text = styled.p`
-	font-size: .5rem;
+  font-size:${props => (props.size ? props.size : '.5rem')}
 	${mq[1]} {
 		font-size: 1rem;
 	}
 	font-family: 'Hind madurai', sans-serif;
 	font-weight: 300;
-	font-size: 1rem;
 	color: ${props => (props.color ? props.color : 'black')};
 	margin: 0;
 	padding: 0;
@@ -54,4 +52,6 @@ export const HomeSection = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	width: 80%;
+	margin: 0 auto;
 `

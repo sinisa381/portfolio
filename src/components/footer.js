@@ -1,5 +1,6 @@
 import React from 'react'
-import { Text } from '../components/shared'
+import styled from '@emotion/styled'
+// import { Text } from '../components/shared'
 
 const Footer = ({ site }) => {
 	const { author } = site
@@ -7,20 +8,32 @@ const Footer = ({ site }) => {
 		<footer
 			css={theme => ({
 				background: theme.color.sunny,
-				backgroundColor: '#FBCF1B',
+				backgroundColor: '#ffffff',
 				fontFamily: theme.font.heading,
+				maxWidth: '80%',
 				marginTop: '2rem',
-				padding: '.5rem'
+				padding: '.5rem',
+				margin: '0 auto'
 			})}
 		>
 			<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-				<Text color='#eeeee'>© {new Date().getFullYear()} All rights reserved Sinisa Colic</Text>
+				<Text size='5px' color='#eeeee'>
+					© {new Date().getFullYear()} All rights reserved Sinisa Colic
+				</Text>
 			</div>
 			<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-				<Text color='#eeeee'>sinisa820@gmail.com</Text>
+				<Text size='50px' color='#eeeee'>
+					sinisa820@gmail.com
+				</Text>
 			</div>
 		</footer>
 	)
 }
 
 export default Footer
+
+const Text = styled.p`
+	font-family: 'Hind madurai', sans-serif;
+	font-size: 15px;
+	margin: 0;
+`
