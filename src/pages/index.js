@@ -1,40 +1,61 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
-import { FlexBox, Title, Text, HomeSection } from '../components/shared'
+import { FlexBox, BackgroundTitle, Title, Text, HomeSection, Abbr } from '../components/shared'
 import { mq } from '../components/globals'
 import reactUndraw from '../images/undraw/undraw_react_y7wq.svg'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
+import { FaReact, FaJsSquare, FaHtml5, FaCss3Alt } from 'react-icons/fa'
+import GatsbyIcon from '../images/gatsby-icon.png'
 
 class BlogPostTemplate extends React.Component {
 	render() {
-    const slika = this.props.data.slicica.childImageSharp.fluid
+		const whitelaptop = this.props.data.whitelaptop.childImageSharp.fluid
+		const blacklaptop = this.props.data.blacklaptop.childImageSharp.fluid
 		const data = this.props.data.allMarkdownRemark.edges.forEach(({ node }) => {
 			return node.frontmatter.title
 		})
 		return (
 			<Layout data={data} location={this.props.location} port={'tralala'}>
 				<HomeSection>
-					<Image
-						src={reactUndraw}
-						alt='react picture'
-						style={{
-							width: '18rem',
-							height: '18rem'
-						}}
-					/>
 					<Box>
-						<Title>Fast and reliable</Title>
-						<Text>
-							Hello and <span>welcome</span>. I'm a frontend developer specialized in React and Gatsby
-							combined with Contentful or Wordpress. Happy hunting!
-						</Text>
+						<Image src={reactUndraw} alt='react picture' />
+						<div>
+							<Title color='#000'>Fast and reliable</Title>
+							<Text color='#000'>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ex architecto incidunt
+								vitae veniam quibusdam dicta voluptate quod at! Rem? Lorem ipsum dolor sit amet,
+								consectetur adipisicing elit. Exercitationem dolor asperiores voluptas odio omnis ipsum
+								sapiente nobis accusamus illo dolore!
+							</Text>
+							<IconsBox>
+								<Abbr title='react'>
+									<FaReact color='#53C1DE' size='2rem' />
+								</Abbr>
+								<Abbr title='gatsby'>
+									<img src={GatsbyIcon} style={{ width: '2rem', height: '2rem', margin: 0 }} />
+								</Abbr>
+								<Abbr title='javascript'>
+									<FaJsSquare color='#FCCF11' size='2rem' />
+								</Abbr>
+								<Abbr title='html'>
+									<FaHtml5 color='#E34F26' size='2rem' />
+								</Abbr>
+								<Abbr title='css3'>
+									<FaCss3Alt color='#4498B5' size='2rem' />
+								</Abbr>
+							</IconsBox>
+						</div>
 					</Box>
-<div style={{width:'100%'}}>
-          <Img fluid={slika}  />
-</div>
 				</HomeSection>
+				<div style={{ textAlign: 'center' }}>
+					<Title>Lorem ipsum dolor sit amet.</Title>
+				</div>
+				<ImageGrid>
+					<Img fluid={whitelaptop} />
+					<Img fluid={blacklaptop} />
+				</ImageGrid>
 			</Layout>
 		)
 	}
@@ -52,9 +73,16 @@ export const Query = graphql`
 				}
 			}
 		}
-		slicica: file(relativePath: { eq: "code.jpg" }) {
+		whitelaptop: file(relativePath: { eq: "black-contemporary-desk-296115.jpg" }) {
 			childImageSharp {
-				fluid(maxWidth: 300) {
+				fluid(maxWidth: 600) {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+		blacklaptop: file(relativePath: { eq: "black.jpg" }) {
+			childImageSharp {
+				fluid(maxWidth: 600) {
 					...GatsbyImageSharpFluid
 				}
 			}
@@ -62,21 +90,36 @@ export const Query = graphql`
 	}
 `
 
-const Image = styled.img`margin: 0;`
-const Box = styled.div`
+const Image = styled.img`
+	/* margin: .6rem; */
 	width: 100%;
-	border: none;
-	margin-left: 1rem;
-	padding: 0rem;
-	padding-left: 0rem;
+`
+const Box = styled.div`
+	${mq[3]} {
+		width: 100%;
+		margin-bottom: 1.5rem;
+		display: grid;
+		grid-template-columns: 40vw 1fr;
+		grid-gap: 40px;
+	}
+`
+const IconsBox = styled.div`
+	display: grid;
+	grid-gap: 20px;
+	grid-auto-flow: column;
+	justify-content: start;
+	margin-top: .5rem;
+`
+const ImageGrid = styled.div`
+	width: 100%;
 	${mq[1]} {
-		width: 70%;
+		width: 90%;
+		margin: 0 auto;
+		display: grid;
+		grid-gap: 1rem;
+		grid-template-columns: 1fr 1fr;
 	}
 	${mq[2]} {
-		width: 50%;
-		margin-left: 2rem;
-		padding: 2rem;
-		padding-left: 2rem;
-		border-left: 1px solid rgba(0, 0, 0, .2);
+		width: 80%;
 	}
 `

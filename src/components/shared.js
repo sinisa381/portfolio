@@ -6,8 +6,7 @@ export const FlexBox = styled.div`
 	display: flex;
 	justify-content: ${props => (props.justify ? props.justify : 'center')};
 	align-items: ${props => (props.items ? props.items : 'center')};
-  flex-wrap:wrap;
-	/* width: ${props => props.width && props.width}; */
+	flex-wrap: wrap;
 `
 export const NavItem = styled(Link)`
 cursor:pointer;
@@ -19,7 +18,6 @@ padding:4px 0;
 font-family:${theme.font.heading};
 font-family: 'Josefin Sans', sans-serif;
 font-family: 'Lato', sans-serif;
-/* font-family: 'Montserrat', sans-serif; */
 text-decoration:none;
 font-size: ${props => (props.nav ? '.6rem' : '1rem')};
 margin-left: 1.4rem;
@@ -31,9 +29,11 @@ font-variant:${props => props.nav && 'small-caps'}
 `
 
 export const Title = styled.h1`
+	padding: 0;
 	font-family: Lato, sans-serif;
 	font-weight: 300;
 	font-size: 1.9rem;
+	color: ${props => (props.color ? props.color : '#000000')};
 `
 
 export const Text = styled.p`
@@ -48,10 +48,31 @@ export const Text = styled.p`
 	padding: 0;
 `
 export const HomeSection = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
+	margin-bottom: 1rem;
+	${mq[1]} {
+		width: 90%;
+		margin-bottom: 1rem;
+	}
+	${mq[2]} {
+		width: 80%;
+		margin-bottom: 1rem;
+	}
+`
+
+export const BackgroundTitle = styled.div`
+	background-color: #a9acb1;
+	padding: 2rem;
+	width: 100%;
+	${mq[1]} {
+	}
+`
+
+export const Abbr = styled.abbr`
+	border-bottom: none !important;
+	cursor: default !important;
+	text-decoration: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
 `
