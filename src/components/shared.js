@@ -60,7 +60,7 @@ export const Text = styled.p`
 	margin: 0;
 	padding: 0;
 `
-export const HomeSection = styled.div`
+export const Container = styled.div`
 	width: 90%;
 	margin: 0 auto;
 	margin-bottom: 1rem;
@@ -88,4 +88,21 @@ export const Abbr = styled.abbr`
 	text-decoration: none !important;
 	padding: 0 !important;
 	margin: 0 !important;
+`
+export const Image = styled.img`
+	margin: 0;
+	/* margin: .6rem; */
+	width: 100%;
+`
+
+export const Box = styled.div`
+	${mq[3]} {
+		width: 100%;
+		margin-bottom: 1.5rem;
+		display: grid;
+		grid-template-columns: 40vw 1fr;
+		grid-gap: 40px;
+		justify-content: center;
+		align-items: center;
+	}
 `

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
-import { FlexBox, BackgroundTitle, Title, Text, HomeSection, Abbr } from '../components/shared'
+import { Image, Box, FlexBox, BackgroundTitle, Title, Text, Container, Abbr } from '../components/shared'
 import { mq } from '../components/globals'
 import reactUndraw from '../images/undraw/undraw_react_y7wq.svg'
 import Layout from '../components/layout'
@@ -19,7 +19,7 @@ class BlogPostTemplate extends React.Component {
 		})
 		return (
 			<Layout data={data} location={this.props.location} port={'tralala'}>
-				<HomeSection>
+				<Container>
 					<Box>
 						<Fade>
 							<Image src={reactUndraw} alt='react picture' />
@@ -50,7 +50,7 @@ class BlogPostTemplate extends React.Component {
 							</IconsBox>
 						</div>
 					</Box>
-				</HomeSection>
+				</Container>
 				<div style={{ textAlign: 'center' }}>
 					<Title>Lorem ipsum dolor sit amet.</Title>
 				</div>
@@ -92,19 +92,6 @@ export const Query = graphql`
 	}
 `
 
-const Image = styled.img`
-	/* margin: .6rem; */
-	width: 100%;
-`
-const Box = styled.div`
-	${mq[3]} {
-		width: 100%;
-		margin-bottom: 1.5rem;
-		display: grid;
-		grid-template-columns: 40vw 1fr;
-		grid-gap: 40px;
-	}
-`
 const IconsBox = styled.div`
 	display: grid;
 	grid-gap: 20px;

@@ -10,6 +10,6 @@ const AnotherLotie = props => {
 		}
 	}
 
-	return <Lottie options={defaultOptions} style={{ width: '100%', height: '100%' }} />
+	return <Lottie options={defaultOptions} style={{ width: props.width, height: '100%' }} />
 }
 export default AnotherLotie
