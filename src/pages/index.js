@@ -24,10 +24,9 @@ class BlogPostTemplate extends React.Component {
 						<div>
 							<Title color='#000'>Fast and reliable</Title>
 							<Text color='#000'>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ex architecto incidunt
-								vitae veniam quibusdam dicta voluptate quod at! Rem? Lorem ipsum dolor sit amet,
-								consectetur adipisicing elit. Exercitationem dolor asperiores voluptas odio omnis ipsum
-								sapiente nobis accusamus illo dolore!
+								Porro ex architecto incidunt vitae veniam quibusdam dicta voluptate quod at! Rem? Lorem
+								ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem dolor asperiores
+								voluptas odio omnis ipsum sapiente nobis accusamus illo dolore!
 							</Text>
 							<IconsBox>
 								<Abbr title='react'>
@@ -42,7 +41,7 @@ class BlogPostTemplate extends React.Component {
 								<Abbr title='html'>
 									<FaHtml5 color='#E34F26' size='2rem' />
 								</Abbr>
-								<Abbr title='css3'>
+								<Abbr title='css'>
 									<FaCss3Alt color='#4498B5' size='2rem' />
 								</Abbr>
 							</IconsBox>
@@ -75,14 +74,14 @@ export const Query = graphql`
 		}
 		whitelaptop: file(relativePath: { eq: "black-contemporary-desk-296115.jpg" }) {
 			childImageSharp {
-				fluid(maxWidth: 600) {
+				fluid(maxWidth: 1200) {
 					...GatsbyImageSharpFluid
 				}
 			}
 		}
 		blacklaptop: file(relativePath: { eq: "black.jpg" }) {
 			childImageSharp {
-				fluid(maxWidth: 600) {
+				fluid(maxWidth: 1200) {
 					...GatsbyImageSharpFluid
 				}
 			}

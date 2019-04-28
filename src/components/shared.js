@@ -30,16 +30,29 @@ font-variant:${props => props.nav && 'small-caps'}
 
 export const Title = styled.h1`
 	padding: 0;
+	margin-bottom: .8rem;
 	font-family: Lato, sans-serif;
 	font-weight: 300;
-	font-size: 1.9rem;
+	font-size: 1.25rem;
+	${mq[1]} {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+	}
+	${mq[2]} {
+		font-size: 2.25rem;
+		margin-bottom: 1.5rem;
+	}
 	color: ${props => (props.color ? props.color : '#000000')};
 `
 
 export const Text = styled.p`
-  font-size:${props => (props.size ? props.size : '.5rem')}
+	font-size: .875rem;
+	line-height: 1.2em;
 	${mq[1]} {
 		font-size: 1rem;
+	}
+	${mq[2]} {
+		font-size: 1.25rem;
 	}
 	font-family: 'Hind madurai', sans-serif;
 	font-weight: 300;
