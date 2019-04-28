@@ -62,6 +62,7 @@ const MasterBackground = styled.div`
 	background-color: #ffffff;
 	height: 100%;
 	min-height: 100vh;
+	overflow-x: hidden;
 `
 
 export default Layout
