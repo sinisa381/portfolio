@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { FlexBox } from '../components/shared'
 import { mq } from './globals'
-import { Flip } from 'react-reveal'
+import { Flip } from 'react-reveal/'
 
 export default ({ site }) => {
 	const { author } = site

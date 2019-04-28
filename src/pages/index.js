@@ -8,6 +8,7 @@ import Layout from '../components/layout'
 import Img from 'gatsby-image'
 import { FaReact, FaJsSquare, FaHtml5, FaCss3Alt } from 'react-icons/fa'
 import GatsbyIcon from '../images/gatsby-icon.png'
+import { Fade } from 'react-reveal'
 
 class BlogPostTemplate extends React.Component {
 	render() {
@@ -20,7 +21,9 @@ class BlogPostTemplate extends React.Component {
 			<Layout data={data} location={this.props.location} port={'tralala'}>
 				<HomeSection>
 					<Box>
-						<Image src={reactUndraw} alt='react picture' />
+						<Fade>
+							<Image src={reactUndraw} alt='react picture' />
+						</Fade>
 						<div>
 							<Title color='#000'>Fast and reliable</Title>
 							<Text color='#000'>
