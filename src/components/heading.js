@@ -12,7 +12,6 @@ const Text = styled.div`
 
 const Heading = ({ location }) => {
 	if (location && location.pathname !== '/') {
-		console.log(location.pathname)
 		return <Text>{location.pathname.replace(/\//g, '')}</Text>
 	} else if (location && location.pathname === '/') {
 		return <Text>home</Text>

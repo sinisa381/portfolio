@@ -10,6 +10,7 @@ export const FlexBox = styled.div`
 `
 export const NavItem = styled(Link)`
 cursor:pointer;
+font-size:1rem !important;
 display:${props => (props.nav ? 'block' : 'none')};
 ${mq[2]}{
   display:block; 
@@ -105,4 +106,26 @@ export const Box = styled.div`
 		justify-content: center;
 		align-items: center;
 	}
+`
+
+export const ImageGrid = styled.div`
+	width: 100%;
+	display: grid;
+	grid-gap: 1rem;
+	${mq[1]} {
+		width: 90%;
+		margin: 0 auto;
+		grid-template-columns: 1fr 1fr;
+	}
+	${mq[2]} {
+		width: 80%;
+	}
+`
+export const IconsBox = styled.div`
+	display: grid;
+	grid-gap: 20px;
+	grid-auto-flow: column;
+	justify-content: ${props => (props.justify ? props.justify : 'start')};
+	align-items: center;
+	margin-top: .5rem;
 `

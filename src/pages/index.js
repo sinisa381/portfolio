@@ -1,14 +1,24 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
-import { Image, Box, FlexBox, BackgroundTitle, Title, Text, Container, Abbr } from '../components/shared'
+import {
+	Image,
+	ImageGrid,
+	IconsBox,
+	Box,
+	FlexBox,
+	BackgroundTitle,
+	Title,
+	Text,
+	Container,
+	Abbr
+} from '../components/shared'
 import { mq } from '../components/globals'
 import reactUndraw from '../images/undraw/undraw_react_y7wq.svg'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
 import { FaReact, FaJsSquare, FaHtml5, FaCss3Alt } from 'react-icons/fa'
 import GatsbyIcon from '../images/gatsby-icon.png'
-import { Fade } from 'react-reveal'
 
 class BlogPostTemplate extends React.Component {
 	render() {
@@ -21,9 +31,9 @@ class BlogPostTemplate extends React.Component {
 			<Layout data={data} location={this.props.location} port={'tralala'}>
 				<Container>
 					<Box>
-						<Fade>
+						<MarginBot>
 							<Image src={reactUndraw} alt='react picture' />
-						</Fade>
+						</MarginBot>
 						<div>
 							<Title color='#000'>Fast and reliable</Title>
 							<Text color='#000'>
@@ -92,23 +102,8 @@ export const Query = graphql`
 	}
 `
 
-const IconsBox = styled.div`
-	display: grid;
-	grid-gap: 20px;
-	grid-auto-flow: column;
-	justify-content: start;
-	margin-top: .5rem;
-`
-const ImageGrid = styled.div`
-	width: 100%;
-	${mq[1]} {
-		width: 90%;
-		margin: 0 auto;
-		display: grid;
-		grid-gap: 1rem;
-		grid-template-columns: 1fr 1fr;
-	}
-	${mq[2]} {
-		width: 80%;
+const MarginBot = styled.div`
+	img {
+		margin-bottom: 1rem;
 	}
 `

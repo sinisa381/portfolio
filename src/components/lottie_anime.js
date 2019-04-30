@@ -84,7 +84,7 @@ const UncontrolledLottie = ({ location }) => {
 
 	return (
 		<LottieContainer>
-			<Lottie options={defaultOptions} style={{ width: '100%', height: '100%' }} />
+			<Lottie options={defaultOptions} />
 		</LottieContainer>
 	)
 }

@@ -78,7 +78,6 @@ const Header = ({ site, location }) => {
 					onHideNav={() => closenav()}
 					onOpenNav={() => opennav()}
 					navStyle={{
-						background: '#242424',
 						maxWidth: '220px'
 					}}
 					items={navItems}
