@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
+import styled from '@emotion/styled'
 import Img from 'gatsby-image'
 import { Image, IconsBox, Box, FlexBox, BackgroundTitle, Title, Text, Container, Abbr } from '../components/shared'
 import services from '../images/undraw/blue/undraw_software_engineer_lvl5.svg'
@@ -41,11 +42,20 @@ export default class Services extends React.Component {
 							</Abbr>
 						</IconsBox>
 					</div>
-					<div style={{ maxwidth: '45rem', margin: '0 auto', marginTop: '1rem' }}>
+					<TextBox>
+						<Text>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus expedita, maiores aut
+							nisi ducimus ipsum quibusdam rem sunt unde ipsa! Incidunt nesciunt officiis nisi iste dolore
+							earum quod molestias laboriosam illum repellat, doloribus voluptatibus reiciendis facere
+							illo. Mollitia asperiores sunt, voluptatem, nemo nostrum voluptatibus nisi repellat voluptas
+							dicta, rem nam?
+						</Text>
+					</TextBox>
+					<WomanCmsContainer>
 						<Fade>
 							<Image src={services} alt='react picture' />
 						</Fade>
-					</div>
+					</WomanCmsContainer>
 				</Container>
 			</Layout>
 		)
@@ -78,4 +88,13 @@ export const Query = graphql`
 			}
 		}
 	}
+`
+const WomanCmsContainer = styled.div`
+	max-width: '45rem';
+	margin: '0 auto';
+	margin-top: '1rem';
+`
+const TextBox = styled.div`
+	margin: 1rem 0;
+	text-align: center;
 `

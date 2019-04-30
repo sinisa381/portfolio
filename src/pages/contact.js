@@ -22,8 +22,8 @@ export default ({ location }) => (
 				<Input type='text' name='email' placeholder='your email' id='email' />
 				<Label htmlFor='Message'>Message</Label>
 				<Textarea className='ajde' name='message' id='message' rows='5' cols='30' />
-				<Input type='submit' value='Send Message' className='special' />
-				<Input type='reset' value='Clear' />
+				<Button type='submit'>Send Message</Button>
+				<Button type='reset'>Clear</Button>
 			</FormContainer>
 		</Container>
 	</Layout>
@@ -80,3 +80,16 @@ const Textarea = styled.textarea`
 `
 
 const Label = styled.label`${color};`
+
+const Button = styled.button`
+	border: none;
+	outline: none;
+	background-color: #007987;
+	cursor: pointer;
+	padding: .5rem;
+	color: #fff;
+	transition: all .1s;
+	&:hover {
+		background-color: #000;
+	}
+`
