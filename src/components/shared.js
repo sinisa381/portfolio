@@ -48,7 +48,7 @@ export const Title = styled.h1`
 
 export const Text = styled.p`
 	font-size: .875rem;
-	line-height: 1.2em;
+	line-height: 1.4em;
 	${mq[1]} {
 		font-size: 1rem;
 	}

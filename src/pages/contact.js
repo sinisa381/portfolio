@@ -4,10 +4,57 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/core'
 import { Container } from '../components/shared'
 import { mq } from '../components/globals'
+import { Text, Abbr, Title } from '../components/shared'
+import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa'
 
 export default ({ location }) => (
 	<Layout location={location}>
 		<Container>
+			<Title>You can contact me on social media or write me a message here.</Title>
+			<Box>
+				<Contact>
+					<Text>Sinisa Colic </Text>
+				</Contact>
+				<Contact>
+					<Text>sinisa820@gmail.com</Text>
+				</Contact>
+				<Social>
+					<Abbr title='facebook'>
+						<a
+							href='https://facebook.com'
+							target='__blank'
+							rel='noopener noreferer'
+							style={{ marginLeft: '-3px' }}
+						>
+							<FaFacebook color='#405D9A' size='2rem' />
+						</a>
+					</Abbr>
+				</Social>
+				<Social>
+					<Abbr title='twitter'>
+						<a
+							href='https://twitter.com'
+							target='__blank'
+							rel='noopener noreferer'
+							style={{ marginLeft: '-3px' }}
+						>
+							<FaTwitter color='#1DA1F2' size='2rem' />
+						</a>
+					</Abbr>
+				</Social>
+				<Social>
+					<Abbr title='linkedin'>
+						<a
+							href='https://linkedin.com'
+							target='__blank'
+							rel='noopener noreferer'
+							style={{ marginLeft: '-3px' }}
+						>
+							<FaLinkedin color='#0077B5' size='2rem' />
+						</a>
+					</Abbr>
+				</Social>
+			</Box>
 			<FormContainer
 				method='POST'
 				action='#'
@@ -18,8 +65,8 @@ export default ({ location }) => (
 			>
 				<Input type='hidden' name='bot-field' />
 				<Input type='hidden' name='form-name' value='contact' />
-				<Input type='text' name='name' id='name' placeholder='your name' />
-				<Input type='text' name='email' placeholder='your email' id='email' />
+				<Input type='text' name='name' id='name' placeholder='enter your name' />
+				<Input type='text' name='email' placeholder='enter your email' id='email' />
 				<Label htmlFor='Message'>Message</Label>
 				<Textarea className='ajde' name='message' id='message' rows='5' cols='30' />
 				<Button type='submit'>Send Message</Button>
@@ -70,6 +117,7 @@ const Textarea = styled.textarea`
 	width: 100%;
 	border-radius: 3px;
 	overflow-y: scroll;
+	resize: none;
 	&::-webkit-scrollbar {
 		width: 10px;
 		background-color: #007987;
@@ -92,4 +140,14 @@ const Button = styled.button`
 	&:hover {
 		background-color: #000;
 	}
+`
+const Contact = styled.div`
+	border-left: 5px solid #007987;
+	padding: 0 1rem;
+	margin-bottom: .5rem;
+`
+const Box = styled.div`margin-left: -.1rem;`
+const Social = styled.div`
+	display: inline-block;
+	margin-right: .7rem;
 `
