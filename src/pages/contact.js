@@ -8,7 +8,6 @@ export default ({ location }) => (
 			<form method='POST' action='#'>
 				<input type='hidden' name='bot-field' />
 				<input type='hidden' name='form-name' value='contact' />
-				<input type='hidden' name='form-name' value='contact' />
 				<div className='field half first'>
 					<label htmlFor='name'>Name</label>
 					<input type='text' name='name' id='name' />
