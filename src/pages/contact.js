@@ -18,7 +18,7 @@ export default ({ location }) => (
 			>
 				<Input type='hidden' name='bot-field' />
 				<Input type='hidden' name='form-name' value='contact' />
-				<Input type='text' name='your name' id='name' placeholder='your name' />
+				<Input type='text' name='name' id='name' placeholder='your name' />
 				<Input type='text' name='email' placeholder='your email' id='email' />
 				<Label htmlFor='Message'>Message</Label>
 				<Textarea className='ajde' name='message' id='message' rows='5' cols='30' />
