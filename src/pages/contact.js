@@ -5,7 +5,14 @@ import { Container } from '../components/shared'
 export default ({ location }) => (
 	<Layout location={location}>
 		<Container>
-			<form method='POST' action='#'>
+			<form
+				method='POST'
+				action='#'
+				name='contact'
+				data-netlify='true'
+				data-netlify-honeypot='bot-field'
+				data-netlify='true'
+			>
 				<input type='hidden' name='bot-field' />
 				<input type='hidden' name='form-name' value='contact' />
 				<div className='field half first'>
