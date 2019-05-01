@@ -10,6 +10,7 @@ const Text = styled.div`
 
 // replace(/\//g, '')  removes slashes //
 const Heading = ({ location }) => {
+	if (location) console.log(location.pathname)
 	if (location && location.pathname === '/contact/success') {
 		return <Text>success</Text>
 	} else if (location && location.pathname === '/') {
