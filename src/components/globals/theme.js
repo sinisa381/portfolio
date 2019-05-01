@@ -10,7 +10,8 @@ const theme = {
 		sunny: '#FCCF11',
 		purple: '#6B717E',
 		blood: '#E62117',
-		sky: '#348BF8'
+		sky: '#348BF8',
+		contact: '#007987'
 	},
 	shadow: {
 		one: '0px 0px 4px 2px rgba( 0, 0, 0, 0.2 )',

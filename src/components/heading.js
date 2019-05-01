@@ -9,12 +9,13 @@ const Text = styled.div`
 `
 
 // replace(/\//g, '')  removes slashes //
-
 const Heading = ({ location }) => {
-	if (location && location.pathname !== '/') {
-		return <Text>{location.pathname.replace(/\//g, '')}</Text>
+	if (location && location.pathname === '/contact/success') {
+		return <Text>success</Text>
 	} else if (location && location.pathname === '/') {
 		return <Text>home</Text>
+	} else {
+		return <Text>{location.pathname.replace(/\//g, '')}</Text>
 	}
 }
 
