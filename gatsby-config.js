@@ -32,7 +32,16 @@ module.exports = {
 			}
 		},
 
-		`gatsby-transformer-remark`,
+		{
+			resolve: 'gatsby-transformer-remark',
+			options: {
+				plugins: [
+					{
+						resolve: 'gatsby-remark-images'
+					}
+				]
+			}
+		},
 		// {
 		// 	resolve: `@wapps/gatsby-plugin-fonts`,
 		// 	options: {

@@ -46,7 +46,7 @@ export default ({ location }) => (
 			</Box>
 			<FormContainer
 				method='POST'
-				action='/success'
+				action='/success/'
 				name='contact'
 				data-netlify='true'
 				data-netlify-honeypot='bot-field'
