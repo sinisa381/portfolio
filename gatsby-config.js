@@ -56,6 +56,13 @@ module.exports = {
 				path: `${__dirname}/src/logo`
 			}
 		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `portfolio`,
+				path: `${__dirname}/src/portfolio`
+			}
+		},
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
 		{

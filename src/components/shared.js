@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import BackgroundImage from 'gatsby-background-image'
 import { Link } from 'gatsby'
 import { mq, theme } from './globals'
 
@@ -128,4 +129,17 @@ export const IconsBox = styled.div`
 	justify-content: ${props => (props.justify ? props.justify : 'start')};
 	align-items: center;
 	margin-top: .5rem;
+`
+
+export const StyledBackgroundSection = styled(BackgroundImage)`
+  width: 100%;
+  width:10rem;
+  height:10rem;
+  cursor:pointer;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:hover{
+    background-size:120%;
+  }
 `

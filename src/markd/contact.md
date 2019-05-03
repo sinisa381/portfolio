@@ -7,4 +7,4 @@ date: "2019-02-01"
 lottiePath: "../lotties/user_mobile.json"
 ---
 
-contact page
+![alt text](../images/black.jpg "black laptop")
