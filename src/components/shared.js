@@ -110,16 +110,14 @@ export const Box = styled.div`
 `
 
 export const ImageGrid = styled.div`
-	width: 100%;
 	display: grid;
+	justify-content: center;
 	grid-gap: 1rem;
-	${mq[1]} {
-		width: 90%;
-		margin: 0 auto;
-		grid-template-columns: 1fr 1fr;
-	}
+	grid-template-columns: 1fr;
 	${mq[2]} {
+		grid-template-columns: repeat(2, min-content);
 		width: 80%;
+		margin: 0 auto;
 	}
 `
 export const IconsBox = styled.div`
@@ -132,14 +130,51 @@ export const IconsBox = styled.div`
 `
 
 export const StyledBackgroundSection = styled(BackgroundImage)`
-  width: 100%;
-  width:10rem;
-  height:10rem;
+  min-width: 10rem;
+  width:20rem;
+  height: 15rem;
+  min-height: auto;
   cursor:pointer;
   background-position: bottom center;
+  border-radius:5px;
   background-repeat: no-repeat;
   background-size: cover;
-  &:hover{
-    background-size:120%;
+  transition:all .5s;
+  &:hover {
+    transform:scale(1.2);
+    a {
+      display:block;
+      font-weight:bold;
+    }
   }
+`
+
+export const Portfolio = styled.div`
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  position:relative;
+  a{
+   align-items:center;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+   color: white;
+   display:none;
+  }
+	/* img {
+		border-radius: 7px;
+		cursor: pointer;
+	}
+	p {
+		font-family: 'Hind madurai', sans-serif;
+		font-size: .875rem;
+		${mq[1]} {
+			font-size: 1rem;
+		}
+		${mq[2]} {
+			font-size: 1.25rem;
+		}
+	} */
 `
