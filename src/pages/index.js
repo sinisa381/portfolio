@@ -37,7 +37,7 @@ class BlogPostTemplate extends React.Component {
 						<div>
 							<Title color='#000'>Fast and reliable</Title>
 							<Text color='#000'>
-								Porro ex architecto incidunt vitae veniam quibusdam dicta voluptate quod at! Rem? Lorem
+								React ex architecto incidunt vitae veniam quibusdam dicta voluptate quod at! Rem? Lorem
 								ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem dolor asperiores
 								voluptas odio omnis ipsum sapiente nobis accusamus illo dolore!
 							</Text>
