@@ -7,7 +7,6 @@
 	"dependencies": {
 		"@emotion/core": "^10.0.7",
 		"@emotion/styled": "^10.0.7",
-		"@material-ui/core": "^3.9.3",
 		"@mdx-js/mdx": "^0.16.8",
 		"@mdx-js/tag": "^0.16.8",
 		"babel-plugin-emotion": "^10.0.7",
