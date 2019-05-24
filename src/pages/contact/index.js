@@ -24,21 +24,29 @@ export default ({ location }) => (
 			<Box>
 				<Social>
 					<Abbr title='facebook'>
-						<LinkIcon href='https://facebook.com' target='__blank' rel='noopener noreferer'>
+						<LinkIcon
+							href='https://www.facebook.com/sinisa.d.colic'
+							target='__blank'
+							rel='noopener noreferer'
+						>
 							<FaFacebook color='#405D9A' size='2rem' />
 						</LinkIcon>
 					</Abbr>
 				</Social>
 				<Social>
 					<Abbr title='twitter'>
-						<LinkIcon href='https://twitter.com' target='__blank' rel='noopener noreferer'>
+						<LinkIcon href='https://twitter.com/Sinisa820' target='__blank' rel='noopener noreferer'>
 							<FaTwitter color='#1DA1F2' size='2rem' />
 						</LinkIcon>
 					</Abbr>
 				</Social>
 				<Social>
 					<Abbr title='linkedin'>
-						<LinkIcon href='https://linkedin.com' target='__blank' rel='noopener noreferer'>
+						<LinkIcon
+							href='https://www.linkedin.com/in/sinisa-colic-245228187/'
+							target='__blank'
+							rel='noopener noreferer'
+						>
 							<FaLinkedin color='#0077B5' size='2rem' />
 						</LinkIcon>
 					</Abbr>

@@ -11,14 +11,14 @@ export default ({ location }) => (
 	<Layout location={location}>
 		<Container>
 			<Box>
-				<Title>Some Info About Me</Title>
+				<Title>How it all began</Title>
 			</Box>
 			<Margin>
 				<Text>
-					Started working with React in 2017.I made a really good progress and then I found out about Gatsby.
-					After that i had to familiarize myself with Graphql because it is crucial in Gatsby workflow. I
-					never regret spending time reading Gatsby docs. They were very informative, well written.In the end
-					the Gatsby skill is making web development more fun than ever before!
+					Started working with React in 2017. I made a really good progress and then I found out about Gatsby.
+					After that I had to familiarize myself with Graphql because it is crucial in Gatsby workflow. I
+					never regret spending time reading Gatsby docs. They were very informative and well written. In the
+					end the Gatsby skill is making web development more fun than ever before!
 				</Text>
 			</Margin>
 			<Margin>
