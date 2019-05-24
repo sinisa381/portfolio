@@ -76,13 +76,6 @@ export const Container = styled.div`
 	}
 `
 
-export const BackgroundTitle = styled.div`
-	background-color: #a9acb1;
-	padding: 2rem;
-	width: 100%;
-	${mq[1]} {
-	}
-`
 
 export const Abbr = styled.abbr`
 	border-bottom: none !important;

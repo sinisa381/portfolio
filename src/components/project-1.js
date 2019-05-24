@@ -1,8 +1,5 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
-import styled from '@emotion/styled'
-import { mq, theme } from './globals'
-import Image from 'gatsby-image'
 
 import { StyledBackgroundSection, Portfolio } from './shared'
 

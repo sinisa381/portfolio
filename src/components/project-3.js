@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import { StyledBackgroundSection, Portfolio } from './shared'
-import styled from '@emotion/styled'
 
 const BackgroundSection = () => (
 	<StaticQuery

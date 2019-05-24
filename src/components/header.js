@@ -15,7 +15,7 @@ const Header = ({ site, location }) => {
 	const [ showNav, setShowNav ] = useState(false)
 	const opennav = () => setShowNav(true)
 	const closenav = () => setShowNav(false)
-	const { about, author, description, title } = site
+	// const { about, author, description, title } = site
 	const navItems = useStaticQuery(graphql`
 		query {
 			allMarkdownRemark {

@@ -1,19 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
-import {
-	Image,
-	ImageGrid,
-	IconsBox,
-	Box,
-	FlexBox,
-	BackgroundTitle,
-	Title,
-	Text,
-	Container,
-	Abbr
-} from '../components/shared'
-import { mq } from '../components/globals'
+import { Image, ImageGrid, IconsBox, Box, Title, Text, Container, Abbr } from '../components/shared'
+// import { mq } from '../components/globals'
 import reactUndraw from '../images/undraw/undraw_react_y7wq.svg'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
@@ -46,7 +35,11 @@ class BlogPostTemplate extends React.Component {
 									<FaReact color='#53C1DE' size='2rem' />
 								</Abbr>
 								<Abbr title='gatsby'>
-									<img src={GatsbyIcon} style={{ width: '2rem', height: '2rem', margin: 0 }} />
+									<img
+										src={GatsbyIcon}
+										style={{ width: '2rem', height: '2rem', margin: 0 }}
+										alt='gatsby icon'
+									/>
 								</Abbr>
 								<Abbr title='javascript'>
 									<FaJsSquare color='#FCCF11' size='2rem' />
@@ -65,8 +58,8 @@ class BlogPostTemplate extends React.Component {
 					<Title>Lorem ipsum dolor sit amet.</Title>
 				</div>
 				<ImageGrid>
-					<Img fluid={whitelaptop} />
-					<Img fluid={blacklaptop} />
+					<Img fluid={whitelaptop} alt='white laptop' />
+					<Img fluid={blacklaptop} alt='black laptop' />
 				</ImageGrid>
 			</Layout>
 		)

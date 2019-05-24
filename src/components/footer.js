@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { FlexBox } from '../components/shared'
-import { mq } from './globals'
+// import { mq } from './globals'
 import { Flip } from 'react-reveal/'
 import shark from '../lotties/shark.json'
 import LottieContainer from '../components/anotherlottieContainer'
 
 export default ({ site }) => {
-	const { author } = site
+	// const { author } = site
 	return (
 		<React.Fragment>
 			<div style={{ marginTop: '3rem' }}>

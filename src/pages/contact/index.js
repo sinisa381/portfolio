@@ -3,9 +3,9 @@ import Layout from '../../components/layout'
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
 import { Container } from '../../components/shared'
-import { theme } from '../../components/globals'
+// import { theme } from '../../components/globals'
 import { mq } from '../../components/globals'
-import { Text, Abbr, Title } from '../../components/shared'
+import { Abbr, Title } from '../../components/shared'
 import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa'
 
 export default ({ location }) => (
@@ -50,7 +50,6 @@ export default ({ location }) => (
 				name='contact'
 				data-netlify='true'
 				data-netlify-honeypot='bot-field'
-				data-netlify='true'
 			>
 				<Input type='hidden' name='bot-field' />
 				<Input type='hidden' name='form-name' value='contact' />
@@ -129,11 +128,11 @@ const Button = styled.button`
 		background-color: #000;
 	}
 `
-const Contact = styled.div`
-	border-left: 5px solid ${props => props.theme.color.contact};
-	padding: 0 1rem;
-	margin-bottom: .5rem;
-`
+// const Contact = styled.div`
+// 	border-left: 5px solid ${props => props.theme.color.contact};
+// 	padding: 0 1rem;
+// 	margin-bottom: .5rem;
+// `
 const Box = styled.div`
 	margin-left: -.1rem;
 	position: relative;
