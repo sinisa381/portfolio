@@ -48,25 +48,25 @@ const UncontrolledLottie = ({ location }) => {
 		margin-left: -.5rem;
 	`
 	const LottieContainer = styled.div`
-		${location && location.pathname === '/services' && Weiter};
-		${location && location.pathname === '/portfolio' && Rocket};
-		${location && location.pathname === '/about' && About};
-		${location && location.pathname === '/contact' && Contact};
+		${location && location.pathname === '/services/' && Weiter};
+		${location && location.pathname === '/portfolio/' && Rocket};
+		${location && location.pathname === '/about/' && About};
+		${location && location.pathname === '/contact/' && Contact};
 		${location && location.pathname === '/' && Home};
 	`
 
 	function animationData() {
 		if (location) {
 			switch (location.pathname) {
-				case '/contact':
+				case '/contact/':
 					return userMobile
-				case '/portfolio':
+				case '/portfolio/':
 					return rocket
-				case '/services':
+				case '/services/':
 					return weiter
 				case '/':
 					return cube
-				case '/about':
+				case '/about/':
 					return welcome
 				default:
 					return userMobile
@@ -81,7 +81,7 @@ const UncontrolledLottie = ({ location }) => {
 			preserveAspectRatio: 'xMidYMid slice'
 		}
 	}
-
+	console.log(location.pathname)
 	return (
 		<LottieContainer>
 			<Lottie options={defaultOptions} />
