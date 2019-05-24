@@ -15,10 +15,10 @@ export default ({ location }) => (
 			</Box>
 			<Margin>
 				<Text>
-					Started working with React in 2017. Made really good progress and then i found out about Gatsby.
-					After that i had to familiarize myself with Graphql because its crutial in Gatsby workflow. I never
-					regret spending time reading Gatsby docs. They were so informative and in the end the Gatsby skill
-					is making web development more fun then ever!
+					Started working with React in 2017.I made a really good progress and then I found out about Gatsby.
+					After that i had to familiarize myself with Graphql because it is crucial in Gatsby workflow. I
+					never regret spending time reading Gatsby docs. They were very informative, well written.In the end
+					the Gatsby skill is making web development more fun than ever before!
 				</Text>
 			</Margin>
 			<Margin>
@@ -29,10 +29,10 @@ export default ({ location }) => (
 			</Box>
 			<Margin>
 				<Text>
-					I had to polish my frontend skills. Added CSS Grid and styled components to write faster, simpler
-					and finally better code. There are many more technologies i find amusing and some of them are React
-					Spring for animations, Material Ui framework (has many good solutions/components and eye catching
-					look).
+					I had to polish my frontend skills. Added CSS Grid and Styled Components to write faster, simpler
+					and easy to read code. There are many more technologies I find amusing and some of them are React
+					Spring for animations, Material Ui framework (have many good solutions/components and eye catching
+					look) and many others.
 				</Text>
 			</Margin>
 			<Margin>
@@ -43,8 +43,9 @@ export default ({ location }) => (
 			</Box>
 			<Margin>
 				<Text>
-					As for the backend part of my story, i did dive into Node.js and Firebase. Other then that i haven't
-					looked anything else. There are still many places for improvment and will work on it.
+					As for the backend part of my story, I did dive into Node.js and Firebase. Other than that I haven't
+					looked anything else, but there are still many places for improvement and I will work on it in the
+					near future.
 				</Text>
 			</Margin>
 			<Grid>
