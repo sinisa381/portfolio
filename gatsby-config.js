@@ -12,12 +12,6 @@ module.exports = {
 		`gatsby-plugin-react-helmet`,
 		'gatsby-plugin-emotion',
 		{
-			resolve: `gatsby-plugin-material-ui`,
-			options: {
-				// Add any options here
-			}
-		},
-		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				path: `${__dirname}/src/markd`,
