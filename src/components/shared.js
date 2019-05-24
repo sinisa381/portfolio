@@ -76,7 +76,6 @@ export const Container = styled.div`
 	}
 `
 
-
 export const Abbr = styled.abbr`
 	border-bottom: none !important;
 	cursor: default !important;
@@ -136,9 +135,19 @@ export const StyledBackgroundSection = styled(BackgroundImage)`
   &:hover {
     transform:scale(1.2);
     a {
-      display:block;
-      font-weight:bold;
+      opacity:0;
     }
+  }
+  p{
+    display:none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  color:#fff;
+  }
+  &:hover p {
+    display: block;
   }
 `
 
@@ -147,15 +156,7 @@ export const Portfolio = styled.div`
   height:100%;
   overflow:hidden;
   position:relative;
-  a{
-   align-items:center;
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%, -50%);
-   color: white;
-   display:none;
-  }
+ 
 	/* img {
 		border-radius: 7px;
 		cursor: pointer;

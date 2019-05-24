@@ -4,9 +4,9 @@ import SEO from '../components/seo'
 // import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
 import { ImageGrid, FlexBox, Container } from '../components/shared'
-import Project1 from '../components/project-1'
-import Project2 from '../components/project-2'
-import Project3 from '../components/project-3'
+import Project1 from '../components/project-1.js'
+import Project2 from '../components/project-2.js'
+import Project3 from '../components/project-3.js'
 
 export default class Portfolio extends React.Component {
 	render() {
@@ -28,8 +28,6 @@ export default class Portfolio extends React.Component {
 							))} */}
 							<ImageGrid>
 								<Project1 />
-								<Project2 />
-								<Project3 />
 								{/* <Image Tag='section' fluid={blacklaptop} backgroundColor={`#040e18`} />
 								<Image fluid={whitelaptop} />
 								<Image fluid={whitelaptop} />

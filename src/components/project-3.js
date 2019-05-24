@@ -2,11 +2,11 @@ import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import { StyledBackgroundSection, Portfolio } from './shared'
 
-const BackgroundSection = () => (
+export default () => (
 	<StaticQuery
 		query={graphql`
 			{
-				file(relativePath: { eq: "black.jpg" }) {
+				file(relativePath: { eq: "gatsby-astronaut.png" }) {
 					childImageSharp {
 						fluid(maxWidth: 1200) {
 							...GatsbyImageSharpFluid
@@ -28,5 +28,3 @@ const BackgroundSection = () => (
 		}}
 	/>
 )
-
-export default BackgroundSection

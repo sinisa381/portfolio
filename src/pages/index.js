@@ -26,7 +26,8 @@ class BlogPostTemplate extends React.Component {
 						<div>
 							<Title color='#000'>Fast and reliable</Title>
 							<Text color='#000'>
-								Hello, this is a portfolio of React Developer. The website is build with{' '}
+								Hello! My name is Sinisa Colic. I consider myself a Fullstack developer altho my better
+								qualities are Frontend.This is my portfolio, the website is build with{' '}
 								<A href='https://www.gatsbyjs.org/' rel='noopener noreferrer' target='_blank'>
 									Gatsby
 								</A>. In this project I used{' '}
