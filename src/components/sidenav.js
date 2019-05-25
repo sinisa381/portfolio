@@ -20,7 +20,12 @@ const SideNavigation = props => {
 				{props.items.allMarkdownRemark.edges.map(({ node }) => {
 					const item = node.frontmatter.title
 					return (
-						<NavItem nav to={item} key={item} activeStyle={{ background: 'rgba(0,0,0,.2)', width: '100%' }}>
+						<NavItem
+							nav
+							to={`${item}/`}
+							key={item}
+							activeStyle={{ background: 'rgba(0,0,0,.2)', width: '100%' }}
+						>
 							{item}
 						</NavItem>
 					)

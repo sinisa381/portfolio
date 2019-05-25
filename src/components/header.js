@@ -46,6 +46,7 @@ const Header = ({ site, location }) => {
 			{navItems.allMarkdownRemark.edges.map(({ node }) => {
 				const item = node.frontmatter.title
 				const linkTo = node.frontmatter.path
+				console.log(linkTo)
 
 				return (
 					<NavItem
