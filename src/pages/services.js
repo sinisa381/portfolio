@@ -21,7 +21,7 @@ export default class Services extends React.Component {
 						<div style={{ marginBottom: '1.5rem' }}>
 							<Title color='#000'>User friendly, responsive </Title>
 							<Text color='#000'>
-								All websites are responsive, and allways will be! I care about small details. Every
+								All websites are responsive, and always will be! I care about small details. Every
 								images will have size based on device. So mobile images are smallest.
 							</Text>
 						</div>
@@ -43,7 +43,7 @@ export default class Services extends React.Component {
 					</div>
 					<TextBox>
 						<Text>
-							I build websites using mainly Contentful but i can use any other CMS base as well. When the
+							I build websites using mainly Contentful but I can use any other CMS base as well. When the
 							site is built client can with easy add the data and everything will look in order, in its
 							place.
 						</Text>

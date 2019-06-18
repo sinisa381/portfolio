@@ -25,8 +25,8 @@ class BlogPostTemplate extends React.Component {
 						<div>
 							<Title color='#000'>Fast and reliable</Title>
 							<Text color='#000'>
-								Hello! My name is Sinisa Colic. I consider myself a Fullstack developer altho my better
-								qualities are Frontend.This is my portfolio, the website is build with{' '}
+								Hello! My name is Sinisa Colic. I am Fullstack developer. My better qualities are
+								Frontend.This is my portfolio, the website is built with{' '}
 								<A href='https://www.gatsbyjs.org/' rel='noopener noreferrer' target='_blank'>
 									Gatsby
 								</A>. In this project I used{' '}
@@ -158,6 +158,6 @@ width:100%;
 height:100%;
 `
 const A = styled.a`
-	color: #53c1de;
+	color: blue;
 	/* font-weight: bold; */
 `
