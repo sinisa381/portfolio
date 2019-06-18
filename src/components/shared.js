@@ -3,6 +3,20 @@ import BackgroundImage from 'gatsby-background-image'
 import { Link } from 'gatsby'
 import { mq, theme } from './globals'
 
+export const A = styled.a`
+	text-decoration: none;
+	color: #f8da74;
+	display: flex;
+	flex-direction: column;
+	font-family: Lato, sans-serif;
+	align-items: center;
+	font-weight: bold;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 1;
+`
 export const FlexBox = styled.div`
 	display: flex;
 	justify-content: ${props => (props.justify ? props.justify : 'center')};

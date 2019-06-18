@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 // import styled from '@emotion/styled'
-import { graphql } from 'gatsby'
+// import { graphql } from 'gatsby'
 import { ImageGrid, FlexBox, Container } from '../components/shared'
 import Project1 from '../components/project-1.js'
 import Project2 from '../components/project-2.js'
@@ -28,6 +28,7 @@ export default class Portfolio extends React.Component {
 							))} */}
 							<ImageGrid>
 								<Project1 />
+								<Project2 />
 								{/* <Image Tag='section' fluid={blacklaptop} backgroundColor={`#040e18`} />
 								<Image fluid={whitelaptop} />
 								<Image fluid={whitelaptop} />
@@ -43,29 +44,29 @@ export default class Portfolio extends React.Component {
 	}
 }
 
-export const Query = graphql`
-	query {
-		allMarkdownRemark {
-			edges {
-				node {
-					frontmatter {
-						title
-					}
-				}
-			}
-		}
-		# mapoverme: allFile(
-		# 	filter: { extension: { regex: "/(jpeg|jpg|gif|png)/" }, sourceInstanceName: { eq: "portfolio" } }
-		# ) {
-		# 	edges {
-		# 		node {
-		# 			childImageSharp {
-		# 				fluid(maxWidth: 1200) {
-		# 					...GatsbyImageSharpFluid
-		# 				}
-		# 			}
-		# 		}
-		# 	}
-		# }
-	}
-`
+// export const Query = graphql`
+// 	query {
+// 		allMarkdownRemark {
+// 			edges {
+// 				node {
+// 					frontmatter {
+// 						title
+// 					}
+// 				}
+// 			}
+// 		}
+// 		# mapoverme: allFile(
+// 		# 	filter: { extension: { regex: "/(jpeg|jpg|gif|png)/" }, sourceInstanceName: { eq: "portfolio" } }
+// 		# ) {
+// 		# 	edges {
+// 		# 		node {
+// 		# 			childImageSharp {
+// 		# 				fluid(maxWidth: 1200) {
+// 		# 					...GatsbyImageSharpFluid
+// 		# 				}
+// 		# 			}
+// 		# 		}
+// 		# 	}
+// 		# }
+// 	}
+// `
