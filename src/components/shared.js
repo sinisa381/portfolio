@@ -3,6 +3,73 @@ import BackgroundImage from 'gatsby-background-image'
 import { Link } from 'gatsby'
 import { mq, theme } from './globals'
 
+export const StyledBackgroundSection = styled(BackgroundImage)`
+  min-width: 10rem;
+  width:20rem;
+  height: 15rem;
+  min-height: auto;
+  cursor:pointer;
+  background-position: bottom center;
+  border-radius:5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition:all .5s;
+  transform:scale(1);
+  &:hover {
+    transform:scale(1.1);
+    a {
+      opacity:0;
+    }
+  }
+  p{
+    display:none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  color:#fff;
+  }
+  &:hover p {
+    display: block;
+  }
+`
+export const Portfolio = styled.div`
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  position:relative;
+ 
+	/* img {
+		border-radius: 7px;
+		cursor: pointer;
+	}
+	p {
+		font-family: 'Hind madurai', sans-serif;
+		font-size: .875rem;
+		${mq[1]} {
+			font-size: 1rem;
+		}
+		${mq[2]} {
+			font-size: 1.25rem;
+		}
+	} */
+`
+export const Title = styled.h1`
+	padding: 0;
+	margin-bottom: .8rem;
+	font-family: Lato, sans-serif;
+	font-weight: 300;
+	font-size: 1.25rem;
+	${mq[1]} {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+	}
+	${mq[2]} {
+		font-size: 2.25rem;
+		margin-bottom: 1.5rem;
+	}
+	color: ${props => (props.color ? props.color : '#000000')};
+`
 export const A = styled.a`
 	text-decoration: none;
 	color: #f8da74;
@@ -42,23 +109,6 @@ color: ${props => (props.nav ? '#ffffff' : 'rgba(0,0,0,.5)')};
 margin:${props => props.nav && 0};
 padding:${props => props.nav && '8px 20px'};
 font-variant:${props => props.nav && 'small-caps'}
-`
-
-export const Title = styled.h1`
-	padding: 0;
-	margin-bottom: .8rem;
-	font-family: Lato, sans-serif;
-	font-weight: 300;
-	font-size: 1.25rem;
-	${mq[1]} {
-		font-size: 1.5rem;
-		margin-bottom: 1rem;
-	}
-	${mq[2]} {
-		font-size: 2.25rem;
-		margin-bottom: 1.5rem;
-	}
-	color: ${props => (props.color ? props.color : '#000000')};
 `
 
 export const Text = styled.p`
@@ -133,56 +183,4 @@ export const IconsBox = styled.div`
 	justify-content: ${props => (props.justify ? props.justify : 'start')};
 	align-items: center;
 	margin-top: .5rem;
-`
-
-export const StyledBackgroundSection = styled(BackgroundImage)`
-  min-width: 10rem;
-  width:20rem;
-  height: 15rem;
-  min-height: auto;
-  cursor:pointer;
-  background-position: bottom center;
-  border-radius:5px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition:all .5s;
-  &:hover {
-    transform:scale(1.2);
-    a {
-      opacity:0;
-    }
-  }
-  p{
-    display:none;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-  color:#fff;
-  }
-  &:hover p {
-    display: block;
-  }
-`
-
-export const Portfolio = styled.div`
-  width:100%;
-  height:100%;
-  overflow:hidden;
-  position:relative;
- 
-	/* img {
-		border-radius: 7px;
-		cursor: pointer;
-	}
-	p {
-		font-family: 'Hind madurai', sans-serif;
-		font-size: .875rem;
-		${mq[1]} {
-			font-size: 1rem;
-		}
-		${mq[2]} {
-			font-size: 1.25rem;
-		}
-	} */
 `

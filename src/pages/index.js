@@ -8,7 +8,6 @@ import Layout from '../components/layout'
 import Img from 'gatsby-image'
 import { FaReact, FaJsSquare, FaHtml5, FaCss3Alt } from 'react-icons/fa'
 import GatsbyIcon from '../images/gatsby-icon.png'
-
 class BlogPostTemplate extends React.Component {
 	render() {
 		const whitelaptop = this.props.data.whitelaptop.childImageSharp.fluid
@@ -98,6 +97,20 @@ export const Query = graphql`
 					frontmatter {
 						title
 					}
+				}
+			}
+		}
+		parallax: file(relativePath: { eq: "adventure-clouds.jpg" }) {
+			childImageSharp {
+				fluid(maxWidth: 1200) {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+		hotel: file(relativePath: { eq: "code.jpg" }) {
+			childImageSharp {
+				fluid(maxWidth: 1200) {
+					...GatsbyImageSharpFluid
 				}
 			}
 		}
