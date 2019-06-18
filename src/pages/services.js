@@ -21,9 +21,8 @@ export default class Services extends React.Component {
 						<div style={{ marginBottom: '1.5rem' }}>
 							<Title color='#000'>User friendly, responsive </Title>
 							<Text color='#000'>
-								Porro ex architecto incidunt vitae veniam quibusdam dicta voluptate quod at! Rem? Lorem
-								ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem dolor asperiores
-								voluptas odio omnis ipsum sapiente nobis accusamus illo dolore!
+								All websites are responsive, and allways will be! I care about small details. Every
+								images will have size based on device. So mobile images are smallest.
 							</Text>
 						</div>
 						<Fade>
@@ -44,11 +43,9 @@ export default class Services extends React.Component {
 					</div>
 					<TextBox>
 						<Text>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus expedita, maiores aut
-							nisi ducimus ipsum quibusdam rem sunt unde ipsa! Incidunt nesciunt officiis nisi iste dolore
-							earum quod molestias laboriosam illum repellat, doloribus voluptatibus reiciendis facere
-							illo. Mollitia asperiores sunt, voluptatem, nemo nostrum voluptatibus nisi repellat voluptas
-							dicta, rem nam?
+							I build websites using mainly Contentful but i can use any other CMS base as well. When the
+							site is built client can with easy add the data and everything will look in order, in its
+							place.
 						</Text>
 					</TextBox>
 					<WomanCmsContainer>

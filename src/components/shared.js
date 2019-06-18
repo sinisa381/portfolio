@@ -151,6 +151,7 @@ export const Image = styled.img`
 	margin: 0;
 	/* margin: .6rem; */
 	width: 100%;
+	max-height: 70vh;
 `
 
 export const Box = styled.div`
