@@ -6,6 +6,7 @@ import { MDXRenderer } from 'gatsby-mdx'
 import useMdx from '../components/hooks/use-mdx'
 import BckG from 'gatsby-background-image'
 import { FlexBox, Container } from '../components/shared'
+import SpringButton from '../components/springs/button'
 
 export default props => {
 	const posts = useMdx()
@@ -20,9 +21,7 @@ export default props => {
 								<h1>{post.title && post.title}</h1>
 								<MDXRenderer>{post.body}</MDXRenderer>
 								<Bck fluid={post.sharp.fluid} Tag='div' />
-								<Href href={post.path} rel='noopener noreferrer' target='_blank'>
-									check the site here &rarr;
-								</Href>
+								<SpringButton path={post.path}>check the site here &rarr;</SpringButton>
 							</div>
 						))}
 					</FlexBox>
@@ -52,9 +51,4 @@ box-shadow: 0 0 4px rgba(0, 0, 0, .125);
   background-size: cover;
   padding-top: 50%;
   background-repeat:no-repeat;
-`
-
-const Href = styled.a`
-	display: block;
-	margin: 1rem 0 3rem;
 `
