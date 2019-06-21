@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
-import { Image, IconsBox, Box, Title, Text, Container, Abbr } from '../components/shared'
+import { Image, IconsBox, Grid, Title, Text, Container, Abbr } from '../components/shared'
 import { mq } from '../components/globals'
 import reactUndraw from '../images/undraw/undraw_react_y7wq.svg'
 import Layout from '../components/layout'
@@ -12,13 +12,10 @@ class BlogPostTemplate extends React.Component {
 	render() {
 		const whitelaptop = this.props.data.whitelaptop.childImageSharp.fluid
 		const blacklaptop = this.props.data.blacklaptop.childImageSharp.fluid
-		const data = this.props.data.allMarkdownRemark.edges.forEach(({ node }) => {
-			return node.frontmatter.title
-		})
 		return (
-			<Layout data={data} location={this.props.location} port={'tralala'}>
+			<Layout location={this.props.location} port={'tralala'}>
 				<Container>
-					<Box>
+					<Grid>
 						<MarginBot>
 							<Image src={reactUndraw} alt='react picture' />
 						</MarginBot>
@@ -72,7 +69,7 @@ class BlogPostTemplate extends React.Component {
 								</Abbr>
 							</IconsBox>
 						</div>
-					</Box>
+					</Grid>
 				</Container>
 				<div style={{ textAlign: 'center' }}>
 					<Title>Browse with the speed</Title>
@@ -91,15 +88,6 @@ class BlogPostTemplate extends React.Component {
 export default BlogPostTemplate
 export const Query = graphql`
 	query {
-		allMarkdownRemark {
-			edges {
-				node {
-					frontmatter {
-						title
-					}
-				}
-			}
-		}
 		parallax: file(relativePath: { eq: "adventure-clouds.jpg" }) {
 			childImageSharp {
 				fluid(maxWidth: 1200) {

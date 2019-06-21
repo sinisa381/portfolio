@@ -22,7 +22,7 @@ export const StyledBackgroundSection = styled(BackgroundImage)`
     }
   }
   p{
-    display:none;
+  display:none;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -149,16 +149,16 @@ export const Abbr = styled.abbr`
 `
 export const Image = styled.img`
 	margin: 0;
-	/* margin: .6rem; */
 	width: 100%;
 	max-height: 70vh;
 `
 
-export const Box = styled.div`
+export const Grid = styled.div`
+	display: grid;
+	grid-template-columns: 1fr;
 	${mq[3]} {
 		width: 100%;
 		margin-bottom: 1.5rem;
-		display: grid;
 		grid-template-columns: 40vw 1fr;
 		grid-gap: 40px;
 		justify-content: center;

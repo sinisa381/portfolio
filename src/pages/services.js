@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
 import Img from 'gatsby-image'
-import { Image, IconsBox, Box, Title, Text, Container, Abbr } from '../components/shared'
+import { Image, IconsBox, Grid, Title, Text, Container, Abbr } from '../components/shared'
 import services from '../images/undraw/blue/undraw_software_engineer_lvl5.svg'
 import mobileService from '../images/undraw/undraw_mobile_marketing_iqbr.svg'
 import { FaWordpress } from 'react-icons/fa'
@@ -13,11 +13,12 @@ import { Fade } from 'react-reveal'
 export default class Services extends React.Component {
 	render() {
 		const contentful = this.props.data.contentful.childImageSharp.fluid
+		console.log(contentful)
 		const location = this.props.location
 		return (
 			<Layout location={location}>
 				<Container>
-					<Box>
+					<Grid>
 						<div style={{ marginBottom: '1.5rem' }}>
 							<Title color='#000'>User friendly, responsive </Title>
 							<Text color='#000'>
@@ -25,10 +26,8 @@ export default class Services extends React.Component {
 								images will have size based on device. So mobile images are smallest.
 							</Text>
 						</div>
-						<Fade>
-							<Image src={mobileService} alt='react picture' />
-						</Fade>
-					</Box>
+						<Image src={mobileService} alt='react picture' />
+					</Grid>
 					<div style={{ marginBottom: '3rem' }} />
 					<div style={{ textAlign: 'center' }}>
 						<Title color='#000'>CMS bases</Title>
@@ -61,15 +60,6 @@ export default class Services extends React.Component {
 
 export const Query = graphql`
 	query {
-		allMarkdownRemark {
-			edges {
-				node {
-					frontmatter {
-						title
-					}
-				}
-			}
-		}
 		whitelaptop: file(relativePath: { eq: "black-contemporary-desk-296115.jpg" }) {
 			childImageSharp {
 				fluid(maxWidth: 1200) {

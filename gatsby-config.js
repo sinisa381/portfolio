@@ -6,36 +6,49 @@ module.exports = {
 		title: `Platforma`,
 		description: `random dev description in config`,
 		author: `@sinisacolic`,
-		about: `web development`
+		about: `web development`,
+		menuLinks: [
+			{ path: '/', name: 'home' },
+			{ path: '/about/', name: 'about' },
+			{ path: '/portfolio/', name: 'portfolio' },
+			{ path: '/services/', name: 'services' },
+			{ path: '/contact/', name: 'contact' }
+		]
 	},
+
 	plugins: [
 		`gatsby-plugin-react-helmet`,
 		'gatsby-plugin-emotion',
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
 		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				path: `${__dirname}/src/markd`,
-				name: 'markdown-pages'
-			}
-		},
-		{
 			resolve: `gatsby-mdx`,
 			options: {
-				// Apply gatsby-mdx to both .mdx and .md files
-				extensions: [ '.mdx', '.md' ]
-			}
-		},
-
-		{
-			resolve: 'gatsby-transformer-remark',
-			options: {
-				plugins: [
+				defaultLayouts: {
+					default: require.resolve('./src/components/layout.js')
+				},
+				gatsbyRemarkPlugins: [
 					{
 						resolve: 'gatsby-remark-images'
 					}
 				]
+			}
+		},
+		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				name: 'posts',
+				path: `posts`
+			}
+		},
+
+		{
+			resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+			options: {
+				production: true,
+				disable: !process.env.ANALYZE_BUNDLE_SIZE,
+				generateStatsFile: true,
+				analyzerMode: 'static'
 			}
 		},
 		// {
@@ -51,7 +64,7 @@ module.exports = {
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `images`,
-				path: `${__dirname}/src/images`
+				path: `./src/images`
 			}
 		},
 		{

@@ -10,7 +10,7 @@ import { theme } from './globals'
 import Header from './header'
 import Footer from './footer'
 
-const Layout = ({ children, data, location }) => {
+const Layout = ({ children, location }) => {
 	const { site } = useStaticQuery(graphql`
 		query {
 			site {
@@ -34,7 +34,7 @@ const Layout = ({ children, data, location }) => {
 			</Helmet>
 			<MasterBackground>
 				<ThemeProvider theme={theme}>
-					<Header site={siteMetadata} data={data} location={location} />
+					<Header site={siteMetadata} location={location} />
 					<div>
 						<div
 							css={theme => ({

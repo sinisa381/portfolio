@@ -81,7 +81,6 @@ const UncontrolledLottie = ({ location }) => {
 			preserveAspectRatio: 'xMidYMid slice'
 		}
 	}
-	console.log(location.pathname)
 	return (
 		<LottieContainer>
 			<Lottie options={defaultOptions} />

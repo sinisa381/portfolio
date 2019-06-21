@@ -14,19 +14,15 @@ const SideNavigation = props => {
 					maxWidth: '220px'
 				}}
 			>
-				<NavItem nav to='/' activeStyle={{ background: 'rgba(0,0,0,.2)', width: '100%' }}>
-					home
-				</NavItem>
-				{props.items.allMarkdownRemark.edges.map(({ node }) => {
-					const item = node.frontmatter.title
+				{props.navItems.map(item => {
 					return (
 						<NavItem
 							nav
-							to={`${item}/`}
-							key={item}
+							to={item.path}
+							key={item.name}
 							activeStyle={{ background: 'rgba(0,0,0,.2)', width: '100%' }}
 						>
-							{item}
+							{item.name}
 						</NavItem>
 					)
 				})}
