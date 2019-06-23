@@ -38,7 +38,9 @@
 		"react-lottie": "^1.2.3",
 		"react-reveal": "^1.2.2",
 		"react-simple-sidenav": "^1.0.1",
-		"react-spring": "^8.0.25"
+		"react-spring": "^8.0.25",
+		"typeface-aleo": "^0.0.69",
+		"typeface-clear-sans": "^0.0.44"
 	},
 	"devDependencies": {
 		"prettier": "^1.16.4"

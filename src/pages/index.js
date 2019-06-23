@@ -16,7 +16,6 @@ export default props => {
 		<Layout location={props.location} port={'tralala'}>
 			<Container>
 				<Grid>
-					{/* <Image src={reactUndraw} alt='react picture' /> */}
 					<ReactUndraw css={css(`max-height:70vh;width:100%; display:block;`)} />
 					<div>
 						<Title color='#000'>Fast and reliable</Title>
@@ -121,11 +120,6 @@ const Flexbox = styled.div`
 	}
 `
 
-// const MarginBot = styled.div`
-// 	svg {
-// 		margin-bottom: 1rem;
-// 	}
-// `
 const StyledImage = styled.div`
 	width: 100wv;
 	height: 100wv;
@@ -138,4 +132,7 @@ const OmgImage = styled(Img)`
 width:100%;
 height:100%;
 `
-const A = styled.a`color: blue;`
+const A = styled.a`
+	color: blue;
+	font-family: Clear Sans;
+`

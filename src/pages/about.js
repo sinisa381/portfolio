@@ -23,7 +23,6 @@ export default ({ location }) => (
 				</Text>
 			</Margin>
 			<Margin>
-				{/* <Image src={typing} alt='react picture' /> */}
 				<Typing css={css(`max-height:70vh;width:100%; display:block;`)} />
 			</Margin>
 			<Box>
@@ -38,7 +37,6 @@ export default ({ location }) => (
 				</Text>
 			</Margin>
 			<Margin>
-				{/* <Image src={development} alt='react picture' /> */}
 				<Development css={css(`max-height:70vh;width:100%; display:block;`)} />
 			</Margin>
 			<Box>
@@ -53,11 +51,9 @@ export default ({ location }) => (
 			</Margin>
 			<Grid>
 				<Width>
-					{/* <Image src={activity} alt='react picture' /> */}
 					<Activity css={css(`max-height:70vh;width:100%; display:block;`)} />
 				</Width>
 				<Width>
-					{/* <Image src={version_control} alt='react picture' /> */}
 					<VersionControl css={css(`max-height:70vh;width:100%; display:block;`)} />
 				</Width>
 			</Grid>

@@ -1,3 +1,6 @@
+import 'typeface-clear-sans'
+// import 'typeface-cooper-hewitt'
+import 'typeface-aleo'
 /**
  * Implement Gatsby's Browser APIs in this file.
  *

@@ -25,7 +25,6 @@ export default props => {
 							will have size based on device. So mobile images are smallest.
 						</Text>
 					</div>
-					{/* <Image src={mobileService} alt='react picture' /> */}
 					<MobileService css={css(`max-height:70vh;width:100%; display:block;`)} />
 				</Grid>
 				<div style={{ marginBottom: '3rem' }} />
@@ -48,7 +47,6 @@ export default props => {
 				</TextBox>
 				<WomanCmsContainer>
 					<Fade>
-						{/* <Image src={services} alt='react picture' /> */}
 						<Services css={css(`max-height:70vh;width:100%; display:block;`)} />
 					</Fade>
 				</WomanCmsContainer>

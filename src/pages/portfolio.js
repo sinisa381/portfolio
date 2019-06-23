@@ -5,7 +5,7 @@ import styled from '@emotion/styled'
 import { MDXRenderer } from 'gatsby-mdx'
 import useMdx from '../components/hooks/use-mdx'
 import BckG from 'gatsby-background-image'
-import { FlexBox, Container } from '../components/shared'
+import { FlexBox, Container, Title } from '../components/shared'
 import SpringButton from '../components/springs/button'
 
 export default props => {
@@ -16,14 +16,16 @@ export default props => {
 				<SEO title='Home' keywords={[ `web developer`, `react`, `front end`, `developer` ]} />
 				<Container>
 					<FlexBox>
-						{posts.map((post, i) => (
-							<div key={i}>
-								<h1>{post.title && post.title}</h1>
-								<MDXRenderer>{post.body}</MDXRenderer>
-								<Bck fluid={post.sharp.fluid} Tag='div' />
-								<SpringButton path={post.path}>check the site here &rarr;</SpringButton>
-							</div>
-						))}
+						<MDXstyle>
+							{posts.map((post, i) => (
+								<div key={i}>
+									<Title>{post.title && post.title}</Title>
+									<MDXRenderer>{post.body}</MDXRenderer>
+									<Bck fluid={post.sharp.fluid} Tag='div' />
+									<SpringButton path={post.path}>check the site here &rarr;</SpringButton>
+								</div>
+							))}
+						</MDXstyle>
 					</FlexBox>
 				</Container>
 			</Layout>
@@ -51,4 +53,13 @@ box-shadow: 0 0 4px rgba(0, 0, 0, .125);
   background-size: cover;
   padding-top: 50%;
   background-repeat:no-repeat;
+`
+const MDXstyle = styled.div`
+	p {
+		font-family: Clear Sans;
+	}
+
+	h2 {
+		font-family: Clear Sans;
+	}
 `

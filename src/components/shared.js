@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import BackgroundImage from 'gatsby-background-image'
 import { Link } from 'gatsby'
-import { mq, theme } from './globals'
+import { mq } from './globals'
 
 export const StyledBackgroundSection = styled(BackgroundImage)`
   min-width: 10rem;
@@ -54,28 +54,12 @@ export const Portfolio = styled.div`
 		}
 	} */
 `
-export const Title = styled.h1`
-	padding: 0;
-	margin-bottom: .8rem;
-	font-family: Lato, sans-serif;
-	font-weight: 300;
-	font-size: 1.25rem;
-	${mq[1]} {
-		font-size: 1.5rem;
-		margin-bottom: 1rem;
-	}
-	${mq[2]} {
-		font-size: 2.25rem;
-		margin-bottom: 1.5rem;
-	}
-	color: ${props => (props.color ? props.color : '#000000')};
-`
 export const A = styled.a`
 	text-decoration: none;
 	color: #f8da74;
 	display: flex;
 	flex-direction: column;
-	font-family: Lato, sans-serif;
+	font-family: Clear Sans;
 	align-items: center;
 	font-weight: bold;
 	position: absolute;
@@ -98,9 +82,7 @@ ${mq[2]}{
   display:block; 
 }
 padding:4px 0;
-font-family:${theme.font.heading};
-font-family: 'Josefin Sans', sans-serif;
-font-family: 'Lato', sans-serif;
+font-family: Clear Sans;
 text-decoration:none;
 font-size: ${props => (props.nav ? '.6rem' : '1rem')};
 margin-left: 1.4rem;
@@ -111,16 +93,33 @@ padding:${props => props.nav && '8px 20px'};
 font-variant:${props => props.nav && 'small-caps'}
 `
 
+export const Title = styled.h1`
+	padding: 0;
+	margin-bottom: .8rem;
+	font-family: aleo;
+	font-weight: 400;
+	font-size: 1.25rem;
+	${mq[1]} {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+	}
+	${mq[2]} {
+		font-size: 2.25rem;
+		margin-bottom: 1.5rem;
+	}
+	color: ${props => (props.color ? props.color : '#000000')};
+`
+
 export const Text = styled.p`
 	font-size: .875rem;
-	line-height: 1.4em;
+	line-height: 1.3em;
 	${mq[1]} {
 		font-size: 1rem;
 	}
 	${mq[2]} {
 		font-size: 1.25rem;
 	}
-	font-family: 'Hind madurai', sans-serif;
+	font-family: Clear Sans;
 	font-weight: 300;
 	color: ${props => (props.color ? props.color : 'black')};
 	margin: 0;

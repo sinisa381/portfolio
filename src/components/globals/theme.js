@@ -23,6 +23,9 @@ const theme = {
 		mono: 'Menlo, monospace',
 		mont: 'Montserrat, sans-serif',
 		roboto: 'Roboto, sans-serif',
+		cooper: 'Cooper Hewitt',
+		aleo: 'aleo',
+		clear: 'Clear Sans',
 		opensans: 'Open Sans Condensed, sans-serif'
 	},
 	borders: [ 0, '1px solid', '2px solid', '4px solid', '8px solid', '16px solid', '32px solid' ],
