@@ -32,7 +32,7 @@ export default ({ site }) => {
 }
 
 const Text = styled.p`
-	font-family: 'Hind madurai', sans-serif;
+	font-family: Clear Sans;
 	font-size: 15px;
 	margin: 0;
 `
