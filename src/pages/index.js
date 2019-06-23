@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 import { graphql } from 'gatsby'
-import { Image, IconsBox, Grid, Title, Text, Container, Abbr } from '../components/shared'
+import { IconsBox, Grid, Title, Text, Container, Abbr } from '../components/shared'
 import { mq } from '../components/globals'
-import reactUndraw from '../images/undraw/undraw_react_y7wq.svg'
+import ReactUndraw from '../images/undraw/undraw_react_y7wq.svg'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
 import { FaReact, FaJsSquare, FaHtml5, FaCss3Alt } from 'react-icons/fa'
@@ -15,9 +16,8 @@ export default props => {
 		<Layout location={props.location} port={'tralala'}>
 			<Container>
 				<Grid>
-					<MarginBot>
-						<Image src={reactUndraw} alt='react picture' />
-					</MarginBot>
+					{/* <Image src={reactUndraw} alt='react picture' /> */}
+					<ReactUndraw css={css(`max-height:70vh;width:100%; display:block;`)} />
 					<div>
 						<Title color='#000'>Fast and reliable</Title>
 						<Text color='#000'>
@@ -121,11 +121,11 @@ const Flexbox = styled.div`
 	}
 `
 
-const MarginBot = styled.div`
-	img {
-		margin-bottom: 1rem;
-	}
-`
+// const MarginBot = styled.div`
+// 	svg {
+// 		margin-bottom: 1rem;
+// 	}
+// `
 const StyledImage = styled.div`
 	width: 100wv;
 	height: 100wv;

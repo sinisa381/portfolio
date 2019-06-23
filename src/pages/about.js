@@ -1,12 +1,13 @@
 import React from 'react'
+import { css } from '@emotion/core'
 import Layout from '../components/layout'
-import version_control from '../images/undraw/yellow/undraw_version_control_9bpv.svg'
+import VersionControl from '../images/undraw/yellow/undraw_version_control_9bpv.svg'
 import styled from '@emotion/styled'
-import activity from '../images/undraw/yellow/undraw_developer_activity_bv83.svg'
-import typing from '../images/undraw/yellow/undraw_code_typing_7jnv.svg'
-import development from '../images/undraw/yellow/undraw_development_ouy3.svg'
+import Activity from '../images/undraw/yellow/undraw_developer_activity_bv83.svg'
+import Typing from '../images/undraw/yellow/undraw_code_typing_7jnv.svg'
+import Development from '../images/undraw/yellow/undraw_development_ouy3.svg'
 import { mq } from '../components/globals'
-import { Image, Container, Title, Text } from '../components/shared'
+import { Container, Title, Text } from '../components/shared'
 export default ({ location }) => (
 	<Layout location={location}>
 		<Container>
@@ -22,7 +23,8 @@ export default ({ location }) => (
 				</Text>
 			</Margin>
 			<Margin>
-				<Image src={typing} alt='react picture' />
+				{/* <Image src={typing} alt='react picture' /> */}
+				<Typing css={css(`max-height:70vh;width:100%; display:block;`)} />
 			</Margin>
 			<Box>
 				<Title>The Frontend</Title>
@@ -36,7 +38,8 @@ export default ({ location }) => (
 				</Text>
 			</Margin>
 			<Margin>
-				<Image src={development} alt='react picture' />
+				{/* <Image src={development} alt='react picture' /> */}
+				<Development css={css(`max-height:70vh;width:100%; display:block;`)} />
 			</Margin>
 			<Box>
 				<Title>The Backend</Title>
@@ -50,10 +53,12 @@ export default ({ location }) => (
 			</Margin>
 			<Grid>
 				<Width>
-					<Image src={activity} alt='react picture' />
+					{/* <Image src={activity} alt='react picture' /> */}
+					<Activity css={css(`max-height:70vh;width:100%; display:block;`)} />
 				</Width>
 				<Width>
-					<Image src={version_control} alt='react picture' />
+					{/* <Image src={version_control} alt='react picture' /> */}
+					<VersionControl css={css(`max-height:70vh;width:100%; display:block;`)} />
 				</Width>
 			</Grid>
 		</Container>

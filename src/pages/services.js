@@ -1,11 +1,12 @@
 import React from 'react'
+import { css } from '@emotion/core'
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
 import Img from 'gatsby-image'
-import { Image, IconsBox, Grid, Title, Text, Container, Abbr } from '../components/shared'
-import services from '../images/undraw/blue/undraw_software_engineer_lvl5.svg'
-import mobileService from '../images/undraw/undraw_mobile_marketing_iqbr.svg'
+import { IconsBox, Grid, Title, Text, Container, Abbr } from '../components/shared'
+import Services from '../images/undraw/blue/undraw_software_engineer_lvl5.svg'
+import MobileService from '../images/undraw/undraw_mobile_marketing_iqbr.svg'
 import { FaWordpress } from 'react-icons/fa'
 
 import { Fade } from 'react-reveal'
@@ -24,7 +25,8 @@ export default props => {
 							will have size based on device. So mobile images are smallest.
 						</Text>
 					</div>
-					<Image src={mobileService} alt='react picture' />
+					{/* <Image src={mobileService} alt='react picture' /> */}
+					<MobileService css={css(`max-height:70vh;width:100%; display:block;`)} />
 				</Grid>
 				<div style={{ marginBottom: '3rem' }} />
 				<div style={{ textAlign: 'center' }}>
@@ -46,7 +48,8 @@ export default props => {
 				</TextBox>
 				<WomanCmsContainer>
 					<Fade>
-						<Image src={services} alt='react picture' />
+						{/* <Image src={services} alt='react picture' /> */}
+						<Services css={css(`max-height:70vh;width:100%; display:block;`)} />
 					</Fade>
 				</WomanCmsContainer>
 			</Container>

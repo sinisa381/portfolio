@@ -22,6 +22,14 @@ module.exports = {
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
 		{
+			resolve: 'gatsby-plugin-react-svg',
+			options: {
+				rule: {
+					include: /undraw/
+				}
+			}
+		},
+		{
 			resolve: `gatsby-mdx`,
 			options: {
 				defaultLayouts: {
