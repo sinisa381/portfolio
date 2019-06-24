@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
+import { colors } from '../components/globals/colors'
+import TextLoop from 'react-text-loop'
 import { graphql } from 'gatsby'
 import { IconsBox, Grid, Title, Text, Container, Abbr } from '../components/shared'
 import { mq } from '../components/globals'
@@ -20,8 +22,15 @@ export default props => {
 					<div>
 						<Title color='#000'>Fast and reliable</Title>
 						<Text color='#000'>
-							Hello! My name is Sinisa Colic. I am Fullstack developer. My better qualities are
-							Frontend.This is my portfolio, the website is built with{' '}
+							Hello! My name is Sinisa Colic. I am{' '}
+							<TextLoop>
+								{[ 'Frontend', 'Backend', 'Fullstack' ].map(text => (
+									<Text color={colors.gold} key={text}>
+										{text}
+									</Text>
+								))}
+							</TextLoop>{' '}
+							developer. My better qualities are Frontend.This is my portfolio, the website is built with{' '}
 							<A href='https://www.gatsbyjs.org/' rel='noopener noreferrer' target='_blank'>
 								Gatsby
 							</A>. In this project I used{' '}
