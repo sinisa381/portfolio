@@ -17,7 +17,7 @@ export default props => {
 				<Container>
 					<FlexBox>
 						<MDXstyle>
-							{posts.reverse().map((post, i) => (
+							{posts.map((post, i) => (
 								<div key={i}>
 									<Title>{post.title && post.title}</Title>
 									<MDXRenderer>{post.body}</MDXRenderer>
