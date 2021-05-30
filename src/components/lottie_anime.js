@@ -21,7 +21,7 @@ const UncontrolledLottie = ({ location }) => {
 		width: 11rem;
 		height: 11rem;
 		position: absolute;
-		left: -54px;
+		left: -43px;
 		top: 5px;
 	`
 
