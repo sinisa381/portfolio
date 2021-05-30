@@ -17,12 +17,20 @@ export default props => {
 				<Container>
 					<FlexBox>
 						<MDXstyle>
-							{posts.map((post, i) => (
+							{posts.reverse().map((post, i) => (
 								<div key={i}>
 									<Title>{post.title && post.title}</Title>
 									<MDXRenderer>{post.body}</MDXRenderer>
 									<Bck fluid={post.sharp.fluid} Tag='div' />
-									<SpringButton path={post.path}>check the site here &rarr;</SpringButton>
+									<FlexBox justify='space-between' align='center'>
+										<SpringButton path={post.path}>check the site here &rarr;</SpringButton>
+										{console.log(post.github)}
+										{post.github !== 'sry' && <Wrapper>
+											<Github src='/GitHub-Mark-64px.png'  width='30px' height='30px'>
+											</Github>
+												<LinkToGithub href='https://github.com/sinisa381/hotels'/>
+										</Wrapper> }
+									</FlexBox>
 								</div>
 							))}
 						</MDXstyle>
@@ -63,3 +71,17 @@ const MDXstyle = styled.div`
 		font-family: Clear Sans;
 	}
 `
+
+const Github = styled.img``;
+
+const LinkToGithub = styled.a`
+	position:absolute;
+	top:0; bottom:0; left:0; right:0;
+	&:hover{
+		cursor:pointer;
+	}
+`;
+ 
+const Wrapper = styled.div`
+	position:relative;
+`;

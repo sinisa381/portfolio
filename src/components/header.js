@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
 import { FaBars } from 'react-icons/fa'
+import {Container} from '../components/shared'
 import UncontrolledLottie from './lottie_anime'
 import useMenuLinks from './hooks/use-menu-links'
 import SideNav from './sidenav'
@@ -33,7 +34,7 @@ const Header = props => {
 	)
 
 	return (
-		<React.Fragment>
+		<Container>
 			<Nav
 				css={theme => ({
 					background: theme.color.white,
@@ -68,7 +69,7 @@ const Header = props => {
 					<hr style={{ margin: '1.5rem 0' }} />
 				</NavContainer>
 			</Nav>
-		</React.Fragment>
+		</Container>
 	)
 }
 
@@ -82,7 +83,6 @@ const Nav = styled.nav`
 
 const NavContainer = styled.div`
 	margin: 0 auto;
-	width: 80%;
 	position: relative;
 `
 

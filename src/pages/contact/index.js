@@ -60,8 +60,8 @@ export default ({ location }) => (
 			>
 				<Input type='hidden' name='bot-field' />
 				<Input type='hidden' name='form-name' value='contact' />
-				<Input type='text' name='name' id='name' placeholder='enter your name' />
-				<Input type='text' name='email' placeholder='enter your email' id='email' />
+				<Input type='text' name='name' id='name' placeholder='name' />
+				<Input type='text' name='email' placeholder='email' id='email' />
 				<Label htmlFor='Message'>Message</Label>
 				<Textarea name='message' id='message' rows='5' cols='30' />
 				<Button type='submit'>Send Message</Button>

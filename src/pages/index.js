@@ -18,11 +18,11 @@ export default props => {
 		<Layout location={props.location} port={'tralala'}>
 			<Container>
 				<Grid>
-					<ReactUndraw css={css(`max-height:70vh;width:100%; display:block;`)} />
+					<ReactUndraw css={css(`max-height:70vh;@media (max-width:900px){ max-height:30vh; margin-bottom:20px; } width:100%; display:block;`)} />
 					<div>
 						<Title color='#000'>Fast and reliable</Title>
 						<Text color='#000'>
-							Hello! My name is Sinisa Colic. I am{' '}
+							Hello! My name is Sinisa Colic. I have around {new Date().getFullYear() - 2018} years of experiance with web development. I am{' '}
 							<TextLoop>
 								{[ 'Frontend', 'Backend', 'Fullstack' ].map(text => (
 									<Text color={colors.gold} key={text}>
@@ -144,4 +144,5 @@ height:100%;
 const A = styled.a`
 	color: blue;
 	font-family: Clear Sans;
+	
 `

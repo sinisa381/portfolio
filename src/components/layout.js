@@ -29,8 +29,8 @@ const Layout = ({ children, location }) => {
 			<Helmet>
 				{/* <link
 					href='https://fonts.googleapis.com/css?family=Montserrat:200,400|Hind+Madurai|Josefin+Sans:300,400|Josefin+Sans:300,400|Lato:400,700|Mrs+Sheppards'
-					rel='stylesheet' */}
-				/>
+					rel='stylesheet' 
+				/>*/}
 			</Helmet>
 			<MasterBackground>
 				<ThemeProvider theme={theme}>

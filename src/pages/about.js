@@ -23,7 +23,7 @@ export default ({ location }) => (
 				</Text>
 			</Margin>
 			<Margin>
-				<Typing css={css(`max-height:70vh;width:100%; display:block;`)} />
+				<Typing css={css(`max-height:70vh;@media (max-width:900px){ max-height:30vh; margin-bottom:20px; };width:100%; display:block;`)} />
 			</Margin>
 			<Box>
 				<Title>The Frontend</Title>
@@ -37,7 +37,7 @@ export default ({ location }) => (
 				</Text>
 			</Margin>
 			<Margin>
-				<Development css={css(`max-height:70vh;width:100%; display:block;`)} />
+				<Development css={css(`max-height:70vh;@media (max-width:900px){ max-height:30vh; margin-bottom:20px; };width:100%; display:block;`)} />
 			</Margin>
 			<Box>
 				<Title>The Backend</Title>
@@ -51,10 +51,10 @@ export default ({ location }) => (
 			</Margin>
 			<Grid>
 				<Width>
-					<Activity css={css(`max-height:70vh;width:100%; display:block;`)} />
+					<Activity css={css(`max-height:70vh;@media (max-width:900px){ max-height:30vh; margin-bottom:20px; };width:100%; display:block;`)} />
 				</Width>
 				<Width>
-					<VersionControl css={css(`max-height:70vh;width:100%; display:block;`)} />
+					<VersionControl css={css(`max-height:70vh;@media (max-width:900px){ max-height:30vh; margin-bottom:20px; };width:100%; display:block;`)} />
 				</Width>
 			</Grid>
 		</Container>
@@ -65,11 +65,10 @@ const Box = styled.div`
 	width: 50%;
 	margin: 0 auto;
 `
-const Margin = styled.div`margin-bottom: 1.9rem;`
+const Margin = styled.div`margin-bottom: 2.9rem;`
 const Width = styled.div`
 	width: 100%;
-	img {
-		margin-bottom: 1rem;
+		img {
 		${mq[1]} {
 			margin-bottom: 0;
 		}

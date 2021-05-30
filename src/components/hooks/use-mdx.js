@@ -11,6 +11,7 @@ export default () => {
 					frontmatter {
 						title
 						path
+						github
 						image {
 							sharp: childImageSharp {
 								fluid(maxHeight: 450, maxWidth: 1000) {
@@ -27,6 +28,7 @@ export default () => {
 		...item.frontmatter.image,
 		body: item.code.body,
 		path: item.frontmatter.path,
-		title: item.frontmatter.title
+		title: item.frontmatter.title,
+		github: item.frontmatter.github
 	}))
 }

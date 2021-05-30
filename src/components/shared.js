@@ -129,6 +129,7 @@ export const Container = styled.div`
 	width: 90%;
 	margin: 0 auto;
 	margin-bottom: 1rem;
+	max-width:1400px;
 	${mq[1]} {
 		width: 90%;
 		margin-bottom: 1rem;
