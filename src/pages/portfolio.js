@@ -7,6 +7,7 @@ import useMdx from '../components/hooks/use-mdx'
 import BckG from 'gatsby-background-image'
 import { FlexBox, Container, Title } from '../components/shared'
 import SpringButton from '../components/springs/button'
+import GithubImage from '../logo/GitHub-Mark-64px.png'
 
 export default props => {
 	const posts = useMdx()
@@ -26,7 +27,7 @@ export default props => {
 										<SpringButton path={post.path}>check the site here &rarr;</SpringButton>
 										{console.log(post.github)}
 										{post.github !== 'sry' && <Wrapper>
-											<Github src='/GitHub-Mark-64px.png'  width='30px' height='30px'>
+											<Github src={GithubImage}  width='30px' height='30px'>
 											</Github>
 												<LinkToGithub href='https://github.com/sinisa381/hotels'/>
 										</Wrapper> }
