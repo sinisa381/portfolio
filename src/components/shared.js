@@ -132,11 +132,9 @@ export const Container = styled.div`
 	max-width:1400px;
 	${mq[1]} {
 		width: 90%;
-		margin-bottom: 1rem;
 	}
 	${mq[2]} {
 		width: 80%;
-		margin-bottom: 1rem;
 	}
 `
 
