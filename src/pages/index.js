@@ -22,7 +22,7 @@ export default props => {
 					<div>
 						<Title color='#000'>Fast and reliable</Title>
 						<Text color='#000'>
-							Hello! My name is Sinisa Colic. I have around {new Date().getFullYear() - 2018} years of experiance with the web development. I am{' '}
+							Hello! My name is Sinisa Colic. I have around {new Date().getFullYear() - 2018} years of experience with the web development. I am{' '}
 							<TextLoop>
 								{[ 'Frontend', 'Backend', 'Fullstack' ].map(text => (
 									<Text color={colors.gold} key={text}>
