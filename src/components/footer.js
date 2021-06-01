@@ -22,7 +22,7 @@ export default ({ site }) => {
 					</FlexBox>
 					<FlexBox>
 						<Text size='50px' color='#eeeee'>
-							sinisa820@gmail.com
+							sinisa.colic89@gmail.com
 						</Text>
 					</FlexBox>
 				</Footer>
